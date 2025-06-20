@@ -8,6 +8,51 @@ const images = [
   "/assests/elderly1.png",
 ];
 
+const sections = [
+  {
+    title: "About Us",
+    desc: "Discover our story and the mission that drives us to bring hope to the hopeless.",
+    icon: "🌱",
+    link: "/about",
+    btn: "Learn More",
+  },
+  {
+    title: "Our Mission",
+    desc: "Explore the services and outreach programs we offer to transform lives.",
+    icon: "🤝",
+    link: "/services",
+    btn: "See Services",
+  },
+  {
+    title: "Achievements",
+    desc: "See the impact we've made so far through our projects and stories.",
+    icon: "🏆",
+    link: "/blog",
+    btn: "View Blog",
+  },
+  {
+    title: "Gallery",
+    desc: "Browse photos of our work and the people we serve.",
+    icon: "📸",
+    link: "/gallery",
+    btn: "See Gallery",
+  },
+  {
+    title: "Projects",
+    desc: "Learn about our vision and long-term goals for the community.",
+    icon: "🚀",
+    link: "/projects",
+    btn: "Our Projects",
+  },
+  {
+    title: "Contact & Team",
+    desc: "Meet our team or get in touch with us for more information.",
+    icon: "📞",
+    link: "/contact",
+    btn: "Contact Us",
+  },
+];
+
 export default function Home() {
   const settings = {
     dots: true,
@@ -24,6 +69,7 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden text-white font-sans bg-black">
+      {/* Hero Slider */}
       <Slider {...settings}>
         {images.map((src, index) => (
           <div key={index}>
@@ -53,6 +99,25 @@ export default function Home() {
       </Slider>
       {/* Subtle animated overlay */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/60 animate-overlayFade" />
+
+      {/* Section Previews */}
+      <div className="relative z-10 -mt-24 pb-16 bg-gradient-to-b from-black/80 via-white/80 to-primary/10">
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-32">
+          {sections.map((section, idx) => (
+            <div key={section.title} className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
+              <div className="text-5xl mb-4">{section.icon}</div>
+              <h3 className="text-2xl font-bold text-primary mb-2">{section.title}</h3>
+              <p className="text-gray-700 mb-6">{section.desc}</p>
+              <Link
+                to={section.link}
+                className="bg-primary text-white py-2 px-6 rounded-lg text-lg font-semibold hover:bg-red-700 transition-all duration-300 shadow-md"
+              >
+                {section.btn}
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
