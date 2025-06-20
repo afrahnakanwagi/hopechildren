@@ -4,20 +4,20 @@ export default function Donate() {
       <div className="bg-white rounded-3xl shadow-2xl p-10 max-w-lg w-full text-center">
         <h2 className="text-4xl font-extrabold text-primary mb-4">Support Our Mission</h2>
         <p className="text-lg text-gray-700 mb-8">
-          Your generosity helps us provide hope, care, and resources to orphans, vulnerable children, the elderly, and women in Uganda. Every gift makes a difference!
+          Helping the Homeless, Hungry, and Hurtings Children!
         </p>
         <form className="space-y-6">
           <input
             type="number"
             min="1"
             placeholder="Donation Amount (UGX)"
-            className="w-full px-5 py-3 border border-primary/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
+            className="w-full px-5 py-3 border border-primary/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg text-black"
             required
           />
           <input
             type="text"
             placeholder="Your Name (optional)"
-            className="w-full px-5 py-3 border border-primary/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
+            className="w-full px-5 py-3 border border-primary/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg text-black"
           />
           <button
             type="submit"
