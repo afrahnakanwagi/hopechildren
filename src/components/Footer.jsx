@@ -1,55 +1,148 @@
-import { FaPhone, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaPhone, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp, FaEnvelope, FaHeart } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white p-8 md:p-12 flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0 md:space-x-8 shadow-2xl border-t border-gray-800">
-      {/* Brand & Mission */}
-      <div className="flex-1 min-w-[220px] text-center md:text-left">
-        <div className="flex items-center justify-center md:justify-start mb-2">
-          <span className="text-primary text-2xl mr-2">❤️</span>
-          <h3 className="text-xl font-bold tracking-tight">Hope Children & Elderly</h3>
+    <footer className="bg-gradient-to-br from-dark-800 to-dark-900 text-white">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Brand & Mission */}
+          <div className="space-y-4">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center">
+                <FaHeart className="text-xl text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold tracking-tight">Hope Children & Elderly</h3>
+                <p className="text-sm text-primary-300">Christian Foundation Uganda</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              Bringing hope to the hopeless through the Gospel of Jesus Christ. 
+              Founded in 2020, we serve Uganda's most vulnerable with compassion and faith.
+            </p>
+            <div className="flex space-x-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-110" aria-label="Facebook">
+                <FaFacebookF size={16} />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-lg flex items-center justify-center hover:from-secondary-600 hover:to-secondary-700 transition-all duration-300 transform hover:scale-110" aria-label="Twitter">
+                <FaTwitter size={16} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-accent-500 to-accent-600 rounded-lg flex items-center justify-center hover:from-accent-600 hover:to-accent-700 transition-all duration-300 transform hover:scale-110" aria-label="Instagram">
+                <FaInstagram size={16} />
+              </a>
+              <a href="https://wa.me/256701342803" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-success-500 to-success-600 rounded-lg flex items-center justify-center hover:from-success-600 hover:to-success-700 transition-all duration-300 transform hover:scale-110" aria-label="WhatsApp">
+                <FaWhatsapp size={16} />
+              </a>
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-primary-300 mb-4">Contact Information</h4>
+            <div className="space-y-3">
+              <div className="flex items-start space-x-3">
+                <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                  <FaPhone className="text-sm text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-white">Joyce Katiti (Founder)</p>
+                  <p className="text-sm text-gray-300">+1 (781) 330-2611</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-8 h-8 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                  <FaPhone className="text-sm text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-white">Uganda Office</p>
+                  <p className="text-sm text-gray-300">+256 701 342803</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-8 h-8 bg-gradient-to-br from-accent-500 to-accent-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                  <FaMapMarkerAlt className="text-sm text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-white">Location</p>
+                  <p className="text-sm text-gray-300">Uganda, East Africa</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-8 h-8 bg-gradient-to-br from-success-500 to-success-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                  <FaEnvelope className="text-sm text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-white">Email</p>
+                  <p className="text-sm text-gray-300">info@hopechildrenuganda.org</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Focus Areas */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-primary-300 mb-4">Our Focus Areas</h4>
+            <ul className="space-y-2">
+              <li className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
+                <span className="text-sm text-gray-300">Gospel Outreach & Evangelism</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-secondary-500 rounded-full"></div>
+                <span className="text-sm text-gray-300">Orphan & Child Care</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-accent-500 rounded-full"></div>
+                <span className="text-sm text-gray-300">Elderly Support Services</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-success-500 rounded-full"></div>
+                <span className="text-sm text-gray-300">Women's Empowerment</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-warning-500 rounded-full"></div>
+                <span className="text-sm text-gray-300">Education & Healthcare</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-primary-400 rounded-full"></div>
+                <span className="text-sm text-gray-300">Community Development</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-primary-300 mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li><a href="/about" className="text-sm text-gray-300 hover:text-primary-300 transition-colors duration-300">About Our Mission</a></li>
+              <li><a href="/services" className="text-sm text-gray-300 hover:text-primary-300 transition-colors duration-300">Our Services</a></li>
+              <li><a href="/projects" className="text-sm text-gray-300 hover:text-primary-300 transition-colors duration-300">Future Projects</a></li>
+              <li><a href="/gallery" className="text-sm text-gray-300 hover:text-primary-300 transition-colors duration-300">Photo Gallery</a></li>
+              <li><a href="/blog" className="text-sm text-gray-300 hover:text-primary-300 transition-colors duration-300">Success Stories</a></li>
+              <li><a href="/donate" className="text-sm text-gray-300 hover:text-primary-300 transition-colors duration-300">Make a Donation</a></li>
+            </ul>
+          </div>
         </div>
-        <p className="text-sm font-medium text-primary">Christian Foundation Uganda</p>
-        <p className="text-xs text-gray-300 mt-1">Bringing hope to the hopeless through the Gospel of Jesus Christ.</p>
-        <p className="text-xs text-gray-400">Founded in 2020 | Serving Uganda's most vulnerable</p>
       </div>
-      {/* Contact Info */}
-      <div className="flex-1 min-w-[220px] text-center md:text-left">
-        <h4 className="text-lg font-semibold mb-2 text-primary">Contact Information</h4>
-        <p className="flex items-center justify-center md:justify-start text-sm mb-1"><FaPhone className="mr-2 text-primary" /> Joyce Katiti (Founder) <br className="md:hidden" /> <span className="ml-6 md:ml-0">+1 (781) 330-2611</span></p>
-        <p className="flex items-center justify-center md:justify-start text-sm mb-1"><FaPhone className="mr-2 text-primary" /> Uganda Office <br className="md:hidden" /> <span className="ml-6 md:ml-0">+256 701 342803</span></p>
-        <p className="flex items-center justify-center md:justify-start text-sm"><FaMapMarkerAlt className="mr-2 text-primary" /> Uganda, East Africa</p>
-      </div>
-      {/* Focus Areas */}
-      <div className="flex-1 min-w-[220px] text-center md:text-left">
-        <h4 className="text-lg font-semibold mb-2 text-primary">Our Focus Areas</h4>
-        <ul className="text-xs space-y-1 text-gray-200 font-medium">
-          <li>· Gospel Outreach & Evangelism</li>
-          <li>· Orphan & Child Care</li>
-          <li>· Elderly Support Services</li>
-          <li>· Women's Empowerment</li>
-          <li>· Education & Healthcare</li>
-          <li>· Community Development</li>
-        </ul>
-      </div>
-      {/* Social & Legal */}
-      <div className="flex-1 min-w-[220px] text-center md:text-left flex flex-col items-center md:items-start">
-        <div className="flex space-x-4 justify-center md:justify-start mb-3">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors" aria-label="Facebook">
-            <FaFacebookF size={20} />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors" aria-label="Twitter">
-            <FaTwitter size={20} />
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors" aria-label="Instagram">
-            <FaInstagram size={20} />
-          </a>
-          <a href="https://wa.me/256701342803" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors" aria-label="WhatsApp">
-            <FaWhatsapp size={20} />
-          </a>
+
+      {/* Bottom Footer */}
+      <div className="border-t border-dark-700">
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-center md:text-left">
+              <p className="text-sm text-gray-400">
+                © 2025 Hope Children & Elderly Christian Foundation Uganda. All rights reserved.
+              </p>
+            </div>
+            <div className="text-center md:text-right">
+              <p className="text-sm text-primary-300 font-medium flex items-center justify-center md:justify-end space-x-1">
+                <FaHeart className="text-primary-400" />
+                <span>Made with love for Uganda's children</span>
+              </p>
+            </div>
+          </div>
         </div>
-        <p className="text-xs text-gray-300 font-semibold">© 2025 Hope Children & Elderly Christian Foundation Uganda. All rights reserved.</p>
-        <p className="text-xs text-primary mt-1 font-medium">Made with love for Uganda's children ❤️</p>
       </div>
     </footer>
   );

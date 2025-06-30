@@ -14,7 +14,7 @@ import Donate from './screens/Donate';
 export default function App() {
   return (
     <Router>
-      <div className="font-sans bg-dark text-light min-h-screen flex flex-col">
+      <div className="font-sans bg-gradient-to-br from-light via-white to-primary-50 text-dark-800 min-h-screen flex flex-col">
         <Navbar />
         <div className="flex-grow">
           <Routes>
