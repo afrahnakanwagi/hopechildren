@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { FaHeart, FaHandHoldingHeart, FaGraduationCap, FaHome, FaUtensils, FaTshirt, FaHeartbeat, FaBookOpen, FaUsers, FaGlobe, FaShieldAlt, FaCreditCard, FaMobile, FaUniversity } from "react-icons/fa";
 
 const donationAmounts = [
-  { amount: 25000, label: "₦25,000", description: "Provides food for a family for 1 month" },
-  { amount: 50000, label: "₦50,000", description: "School supplies for 5 children" },
-  { amount: 100000, label: "₦100,000", description: "Medical care for elderly person" },
-  { amount: 250000, label: "₦250,000", description: "Vocational training for 1 woman" },
-  { amount: 500000, label: "₦500,000", description: "Builds a small home for family" },
-  { amount: 1000000, label: "₦1,000,000", description: "Complete education for 1 child" }
+  { amountUGX: 25000, amountUSD: 7, labelUGX: "UGX 25,000", labelUSD: "$7", description: "Provides food for a family for 1 month" },
+  { amountUGX: 50000, amountUSD: 14, labelUGX: "UGX 50,000", labelUSD: "$14", description: "School supplies for 5 children" },
+  { amountUGX: 100000, amountUSD: 27, labelUGX: "UGX 100,000", labelUSD: "$27", description: "Medical care for elderly person" },
+  { amountUGX: 250000, amountUSD: 67, labelUGX: "UGX 250,000", labelUSD: "$67", description: "Vocational training for 1 woman" },
+  { amountUGX: 500000, amountUSD: 135, labelUGX: "UGX 500,000", labelUSD: "$135", description: "Builds a small home for family" },
+  { amountUGX: 1000000, amountUSD: 270, labelUGX: "UGX 1,000,000", labelUSD: "$270", description: "Complete education for 1 child" }
 ];
 
 const impactAreas = [
@@ -71,6 +71,7 @@ const paymentMethods = [
 ];
 
 export default function Donate() {
+  const [currency, setCurrency] = useState('UGX');
   const [selectedAmount, setSelectedAmount] = useState(50000);
   const [customAmount, setCustomAmount] = useState('');
   const [donorInfo, setDonorInfo] = useState({
@@ -80,6 +81,7 @@ export default function Donate() {
     anonymous: false,
     recurring: false
   });
+  const [selectedPayment, setSelectedPayment] = useState(paymentMethods[0].title);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -92,7 +94,7 @@ export default function Donate() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const amount = customAmount || selectedAmount;
-    console.log('Donation submitted:', { amount, donorInfo });
+    console.log('Donation submitted:', { amount, donorInfo, currency, paymentMethod: selectedPayment });
     alert('Thank you for your generous donation! You will receive a confirmation email shortly.');
   };
 
@@ -129,19 +131,23 @@ export default function Donate() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {donationAmounts.map((item, index) => (
                 <div 
-                  key={item.amount}
+                  key={currency === 'UGX' ? item.amountUGX : item.amountUSD}
                   className={`text-center p-4 rounded-2xl cursor-pointer transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up ${
-                    selectedAmount === item.amount 
+                    selectedAmount === (currency === 'UGX' ? item.amountUGX : item.amountUSD)
                       ? 'bg-gradient-to-r from-primary-500 to-secondary-500 text-white shadow-large' 
                       : 'bg-gray-50 hover:bg-gray-100 text-dark-800'
                   }`}
                   style={{animationDelay: `${index * 0.1}s`}}
-                  onClick={() => setSelectedAmount(item.amount)}
+                  onClick={() => setSelectedAmount(currency === 'UGX' ? item.amountUGX : item.amountUSD)}
                 >
-                  <div className="text-2xl md:text-3xl font-bold mb-2">{item.label}</div>
+                  <div className="text-2xl md:text-3xl font-bold mb-2">{currency === 'UGX' ? item.labelUGX : item.labelUSD}</div>
                   <div className="text-sm opacity-80">{item.description}</div>
                 </div>
               ))}
+            </div>
+            <div className="flex justify-center gap-4 my-4">
+              <button type="button" onClick={() => setCurrency('UGX')} className={`px-4 py-2 rounded-full font-bold border ${currency === 'UGX' ? 'bg-primary-500 text-white' : 'bg-white text-primary-600'}`}>UGX</button>
+              <button type="button" onClick={() => setCurrency('USD')} className={`px-4 py-2 rounded-full font-bold border ${currency === 'USD' ? 'bg-primary-500 text-white' : 'bg-white text-primary-600'}`}>USD</button>
             </div>
           </div>
         </div>
@@ -164,22 +170,22 @@ export default function Donate() {
                 <div className="grid grid-cols-2 gap-3 mb-4">
                   {donationAmounts.map((item) => (
                     <div 
-                      key={item.amount}
+                      key={currency === 'UGX' ? item.amountUGX : item.amountUSD}
                       className={`p-3 rounded-xl cursor-pointer transition-all duration-300 text-center ${
-                        selectedAmount === item.amount 
+                        selectedAmount === (currency === 'UGX' ? item.amountUGX : item.amountUSD)
                           ? 'bg-gradient-to-r from-primary-500 to-secondary-500 text-white' 
                           : 'bg-gray-50 hover:bg-gray-100 text-dark-800'
                       }`}
-                      onClick={() => setSelectedAmount(item.amount)}
+                      onClick={() => setSelectedAmount(currency === 'UGX' ? item.amountUGX : item.amountUSD)}
                     >
-                      <div className="font-bold">{item.label}</div>
+                      <div className="font-bold">{currency === 'UGX' ? item.labelUGX : item.labelUSD}</div>
                       <div className="text-xs opacity-80">{item.description}</div>
                     </div>
                   ))}
                 </div>
                 <input
                   type="number"
-                  placeholder="Or enter custom amount (UGX)"
+                  placeholder={`Or enter custom amount (${currency})`}
                   value={customAmount}
                   onChange={(e) => setCustomAmount(e.target.value)}
                   className="w-full px-4 py-3 border border-primary-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
@@ -258,12 +264,26 @@ export default function Donate() {
                 <h3 className="text-xl font-bold text-dark-800 mb-4">Payment Method</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {paymentMethods.map((method, index) => (
-                    <div key={method.title} className="border border-primary-200 rounded-xl p-4 hover:border-primary-400 transition-all duration-300 cursor-pointer">
+                    <div
+                      key={method.title}
+                      className={`border border-primary-200 rounded-xl p-4 hover:border-primary-400 transition-all duration-300 cursor-pointer ${selectedPayment === method.title ? 'ring-2 ring-primary-500 border-primary-500 bg-primary-50' : ''}`}
+                      onClick={() => setSelectedPayment(method.title)}
+                    >
                       <div className={`w-12 h-12 bg-gradient-to-r ${method.color} rounded-lg flex items-center justify-center mb-3`}>
                         <div className="text-white text-xl">{method.icon}</div>
                       </div>
                       <h4 className="font-bold text-dark-800 mb-1">{method.title}</h4>
                       <p className="text-sm text-dark-600">{method.description}</p>
+                      {method.title === 'Bank Transfer' && (
+                        <div className="mt-2 text-xs text-dark-700 bg-primary-50 rounded p-2">
+                          <div><b>Bank name:</b> TD Bank</div>
+                          <div><b>Routing number:</b> 2113-70545</div>
+                          <div><b>Account number:</b> 8265167920</div>
+                        </div>
+                      )}
+                      {selectedPayment === method.title && (
+                        <div className="mt-2 text-primary-600 font-bold text-xs">Selected</div>
+                      )}
                     </div>
                   ))}
                 </div>
