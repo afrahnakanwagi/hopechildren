@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaHeart, FaHandHoldingHeart, FaGraduationCap, FaHome, FaUtensils, FaTshirt, FaHeartbeat, FaBookOpen, FaUsers, FaGlobe, FaShieldAlt, FaCreditCard, FaMobile, FaUniversity } from "react-icons/fa";
+import { FaHeart, FaGraduationCap, FaHome, FaUtensils, FaTshirt, FaHeartbeat, FaUsers, FaShieldAlt, FaCreditCard, FaMobile, FaUniversity } from "react-icons/fa";
 
 const donationAmounts = [
   { amountUGX: 25000, amountUSD: 7, labelUGX: "UGX 25,000", labelUSD: "$7", description: "Provides food for a family for 1 month" },
