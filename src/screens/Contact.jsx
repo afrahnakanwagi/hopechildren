@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaHeart, FaUsers, FaGraduationCap, FaHandshake } from "react-icons/fa";
+import Slider from "react-slick";
 
 const team = [
   {
@@ -120,7 +121,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+    <div className="min-h-screen bg-gradient-to-br from-primary/10 via-white to-primary/20 py-12 px-4 flex flex-col items-center">
       {/* Hero Section */}
       <div className="relative w-full h-[40vh] md:h-[50vh] flex items-center justify-center bg-gradient-to-r from-primary-600 to-secondary-600 text-white overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{backgroundImage: 'url(/assests/children3.png)'}} />

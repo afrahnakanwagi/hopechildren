@@ -7,6 +7,10 @@ const images = [
   "/assests/children2.png",
   "/assests/children3.png",
   "/assests/elderly1.png",
+  "/assests/child.jpg",
+  "/assests/child1.jpg",
+  "/assests/child2.jpg",
+  "/assests/child3.jpg",
 ];
 
 const impactStats = [

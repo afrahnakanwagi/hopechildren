@@ -1,4 +1,4 @@
-import { FaHeart, FaUsers, FaGraduationCap, FaHandsHelping , FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaHeart, FaUsers, FaGraduationCap, FaHandsHelping , FaPhone, FaEnvelope } from "react-icons/fa";
 
 // FaCalendarAlt
 
