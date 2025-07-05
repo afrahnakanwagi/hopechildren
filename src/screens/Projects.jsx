@@ -1,4 +1,7 @@
 import { FaGraduationCap, FaHome, FaHeartbeat, FaCross, FaBookOpen, FaHandsHelping, FaUsers, FaGlobe, FaCalendarAlt, FaMapMarkerAlt, FaDollarSign } from "react-icons/fa";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const currentProjects = [
   {
@@ -149,9 +152,75 @@ const futureProjects = [
 const projectStats = [
   { number: "3", label: "Active Projects", icon: <FaHandsHelping /> },
   { number: "4", label: "Future Projects", icon: <FaGlobe /> },
-  { number: "₦215M", label: "Total Budget Needed", icon: <FaDollarSign /> },
+  { number: "USD215M", label: "Total Budget Needed", icon: <FaDollarSign /> },
   { number: "4", label: "Years Timeline", icon: <FaCalendarAlt /> }
 ];
+
+// Card slider settings
+const cardSettings = {
+  dots: true,
+  infinite: true,
+  speed: 600,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: true,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  pauseOnHover: true,
+  nextArrow: <SampleNextArrow />, // custom arrow
+  prevArrow: <SamplePrevArrow />, // custom arrow
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+  appendDots: dots => (
+    <div style={{ bottom: '-30px' }}>
+      <ul style={{ margin: '0px' }}> {dots} </ul>
+    </div>
+  ),
+  customPaging: i => (
+    <div style={{
+      width: '12px',
+      height: '12px',
+      borderRadius: '50%',
+      background: '#f59e42',
+      opacity: 0.5,
+      transition: 'opacity 0.3s',
+    }} />
+  ),
+};
+
+// Custom Arrow Components
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", right: 10, zIndex: 2, width: 40, height: 40, background: "#f59e42", borderRadius: "50%", boxShadow: "0 2px 8px #f59e4233", color: "white" }}
+      onClick={onClick}
+    />
+  );
+}
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", left: 10, zIndex: 2, width: 40, height: 40, background: "#f59e42", borderRadius: "50%", boxShadow: "0 2px 8px #f59e4233", color: "white" }}
+      onClick={onClick}
+    />
+  );
+}
 
 export default function Projects() {
   return (
@@ -218,138 +287,80 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Current Projects */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-800 mb-4">
-            Current <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">Projects</span>
-          </h2>
-          <p className="text-xl text-dark-600 max-w-3xl mx-auto">
-            These are the projects we're actively working on to bring immediate relief and support to communities in need.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {currentProjects.map((project, index) => (
-            <div key={project.title} className="bg-white rounded-3xl shadow-large p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
-              <div className="flex items-center justify-between mb-6">
-                <div className={`w-16 h-16 bg-gradient-to-r ${project.color} rounded-2xl flex items-center justify-center`}>
-                  <div className="text-2xl text-white">{project.icon}</div>
+      {/* Active Projects Slider */}
+      <div className="py-12">
+        <h2 className="text-3xl font-bold text-dark-800 mb-6 text-center">Active Projects</h2>
+        <Slider {...cardSettings} className="modern-card-slider">
+          {currentProjects.map((project, idx) => (
+            <div key={project.title} style={{height: '100%'}}>
+              <div className="modern-card bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl group border border-primary-100"
+                style={{
+                  animationDelay: `${idx * 0.1}s`,
+                  height: '100%',
+                  margin: '0 12px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+              >
+                <div className="flex flex-col flex-1 w-full">
+                  <div className="mb-6 p-4 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full shadow-soft flex items-center justify-center" style={{width: 80, height: 80}}>
+                    {project.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-dark-800 mb-3 group-hover:text-primary-600 transition-colors duration-300">{project.title}</h3>
+                  <p className="text-dark-600 mb-4 leading-relaxed text-base" style={{minHeight: 60}}>{project.description}</p>
+                  <div className="text-primary-600 font-semibold mb-2">{project.impact}</div>
+                  <div className="w-full flex-1 flex flex-col justify-end">
+                    <div className="flex flex-wrap gap-2 justify-center mb-4">
+                      {project.details.map((detail, i) => (
+                        <span key={i} className="bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-xs font-medium border border-primary-100">{detail}</span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <span className="px-3 py-1 bg-success-100 text-success-700 rounded-full text-sm font-semibold">
-                  {project.status}
-                </span>
-              </div>
-              
-              <h3 className="text-2xl font-bold text-dark-800 mb-3">{project.title}</h3>
-              <p className="text-dark-600 mb-4 leading-relaxed">{project.description}</p>
-              
-              <div className="mb-6">
-                <div className="flex justify-between text-sm text-dark-600 mb-2">
-                  <span>Progress</span>
-                  <span>{project.progress}%</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div 
-                    className="bg-gradient-to-r from-primary-500 to-secondary-500 h-2 rounded-full transition-all duration-500"
-                    style={{ width: `${project.progress}%` }}
-                  ></div>
-                </div>
-              </div>
-              
-              <div className="mb-6">
-                <h4 className="font-semibold text-dark-800 mb-3">Impact:</h4>
-                <p className="text-primary-600 font-medium">{project.impact}</p>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold text-dark-800 mb-3">What We Provide:</h4>
-                <ul className="space-y-2">
-                  {project.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-dark-600 text-sm">
-                      <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>{detail}</span>
-                    </li>
-                  ))}
-                </ul>
+                <a
+                  href={`/donate?project=${encodeURIComponent(project.title)}`}
+                  className="mt-2 inline-block bg-gradient-to-r from-primary-500 to-primary-600 text-white py-2 px-6 rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-medium hover:shadow-large transform hover:scale-105"
+                  style={{alignSelf: 'center'}}
+                >
+                  Sponsor this Project
+                </a>
               </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
 
-      {/* Future Projects */}
-      <div className="bg-gradient-to-br from-dark-50 to-dark-100 py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-dark-800 mb-4">
-              Future <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">Projects</span>
-            </h2>
-            <p className="text-xl text-dark-600 max-w-3xl mx-auto">
-              Our ambitious plans to expand our impact and reach even more communities in need through sustainable development initiatives.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {futureProjects.map((project, index) => (
-              <div key={project.title} className="bg-white rounded-3xl shadow-large p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
-                <div className="flex items-center justify-between mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${project.color} rounded-2xl flex items-center justify-center`}>
-                    <div className="text-2xl text-white">{project.icon}</div>
-                  </div>
-                  <span className="px-3 py-1 bg-warning-100 text-warning-700 rounded-full text-sm font-semibold">
-                    {project.status}
-                  </span>
+      {/* Future Projects Slider */}
+      <div className="py-12">
+        <h2 className="text-3xl font-bold text-dark-800 mb-6 text-center">Future Projects</h2>
+        <Slider {...cardSettings} className="modern-card-slider">
+          {futureProjects.map((project, idx) => (
+            <div key={project.title}>
+              <div className="modern-card bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl group border border-primary-100" style={{animationDelay: `${idx * 0.1}s`, minHeight: 380, margin: '0 12px'}}>
+                <div className="mb-6 p-4 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full shadow-soft flex items-center justify-center" style={{width: 80, height: 80}}>
+                  {project.icon}
                 </div>
-                
-                <h3 className="text-2xl font-bold text-dark-800 mb-3">{project.title}</h3>
-                <p className="text-dark-600 mb-4 leading-relaxed">{project.description}</p>
-                
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="bg-gray-50 rounded-xl p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <FaCalendarAlt className="text-primary-500" />
-                      <span className="font-semibold text-dark-800">Timeline</span>
-                    </div>
-                    <p className="text-dark-600">{project.timeline}</p>
+                <h3 className="text-2xl font-bold text-dark-800 mb-3 group-hover:text-primary-600 transition-colors duration-300">{project.title}</h3>
+                <p className="text-dark-600 mb-4 leading-relaxed text-base" style={{minHeight: 60}}>{project.description}</p>
+                <div className="text-primary-600 font-semibold mb-2">Timeline: {project.timeline}</div>
+                <div className="text-primary-600 font-semibold mb-2">Budget: {project.budget}</div>
+                <div className="w-full flex-1 flex flex-col justify-end">
+                  <div className="flex flex-wrap gap-2 justify-center mb-4">
+                    {project.details.map((detail, i) => (
+                      <span key={i} className="bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-xs font-medium border border-primary-100">{detail}</span>
+                    ))}
                   </div>
-                  <div className="bg-gray-50 rounded-xl p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <FaDollarSign className="text-primary-500" />
-                      <span className="font-semibold text-dark-800">Budget</span>
-                    </div>
-                    <p className="text-dark-600">{project.budget}</p>
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-dark-800 mb-3">Project Details:</h4>
-                    <ul className="space-y-2">
-                      {project.details.slice(0, 3).map((detail, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-dark-600 text-sm">
-                          <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-dark-800 mb-3">Expected Benefits:</h4>
-                    <ul className="space-y-2">
-                      {project.benefits.slice(0, 3).map((benefit, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-dark-600 text-sm">
-                          <div className="w-2 h-2 bg-success-500 rounded-full mt-2 flex-shrink-0"></div>
-                          <span>{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <a
+                    href={`/donate?project=${encodeURIComponent(project.title)}`}
+                    className="mt-2 inline-block bg-gradient-to-r from-primary-500 to-primary-600 text-white py-2 px-6 rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-medium hover:shadow-large transform hover:scale-105"
+                  >
+                    Sponsor this Project
+                  </a>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
+          ))}
+        </Slider>
       </div>
 
       {/* Call to Action */}
@@ -380,4 +391,23 @@ export default function Projects() {
       </div>
     </div>
   );
-} 
+}
+
+<style jsx>{`
+  .modern-card-slider .slick-arrow {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .modern-card-slider:hover .slick-arrow {
+    opacity: 1;
+  }
+  .modern-card-slider .slick-dots li button:before {
+    color: #f59e42;
+    font-size: 14px;
+    opacity: 0.5;
+  }
+  .modern-card-slider .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #f59e42;
+  }
+`}</style> 

@@ -41,7 +41,9 @@ const contactInfo = [
   {
     icon: <FaEnvelope />,
     title: "Email",
-    details: ["info@hopechildrenuganda.org", "donations@hopechildrenuganda.org"],
+    details: [, "info@hopechildrenuganda.org"],  
+    // " donations@hopechildrenuganda.org"
+   
     description: "Send us a message anytime"
   },
   {
