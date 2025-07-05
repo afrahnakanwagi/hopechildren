@@ -132,19 +132,19 @@ export default function About() {
       {/* Hero Section */}
       <div className="relative w-full min-h-screen flex items-center justify-center">
         {/* Background Image with Enhanced Overlay */}
-        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url(/assests/children1.png)'}} />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/80 to-secondary-900/90"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
+        <div className="absolute inset-0 bg-cover bg-center z-0" style={{backgroundImage: 'url(/assests/children1.png)'}} />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/80 to-secondary-900/90 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40 z-10"></div>
         
         {/* Animated Background Elements */}
-        <div className="absolute top-20 left-10 w-24 h-24 bg-primary-500/20 rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-40 right-20 w-40 h-40 bg-secondary-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-accent-500/15 rounded-full blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-1/3 right-1/4 w-20 h-20 bg-success-500/15 rounded-full blur-2xl animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute top-20 left-10 w-24 h-24 bg-primary-500/20 rounded-full blur-2xl animate-pulse z-10"></div>
+        <div className="absolute bottom-40 right-20 w-40 h-40 bg-secondary-500/20 rounded-full blur-3xl animate-pulse z-10" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-accent-500/15 rounded-full blur-xl animate-pulse z-10" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-1/3 right-1/4 w-20 h-20 bg-success-500/15 rounded-full blur-2xl animate-pulse z-10" style={{animationDelay: '0.5s'}}></div>
         
         {/* Floating Particles */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden z-10">
           {[...Array(8)].map((_, i) => (
             <div
               key={i}
@@ -159,7 +159,7 @@ export default function About() {
           ))}
         </div>
         
-        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
+        <div className="relative z-30 text-center px-4 max-w-6xl mx-auto">
           <div className="animate-fade-in-down">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white drop-shadow-2xl mb-6">
               About <span className="bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-400 bg-clip-text text-transparent animate-gradient">Hope Children</span>
