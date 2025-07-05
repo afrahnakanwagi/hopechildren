@@ -16,7 +16,7 @@ const team = [
     name: "Nakimera Lilian",
     role: "Head of Human Resources",
     phone: "+256 701 342803",
-    email: "lilian@hopechildrenuganda.org",
+    email: "liliannakimera64@gmail. Com",
     avatar: "👩🏾‍💼",
     description: "Oversees our team development, community outreach programs, and ensures the well-being of all staff and volunteers.",
     specialties: ["Team Management", "Community Programs", "Volunteer Coordination"]

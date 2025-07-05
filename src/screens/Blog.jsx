@@ -1,34 +1,4 @@
-import Slider from "react-slick";
 
-const achievements = [
-  {
-    icon: "🎓",
-    text: "Helped children return to school and graduate with top grades",
-  },
-  {
-    icon: "🏥",
-    text: "Provided access to quality health care for orphans and elders",
-  },
-  {
-    icon: "🍲",
-    text: "Delivered clothing, food, and shelter to families in need",
-  },
-  {
-    icon: "✨",
-    text: "Transformed hopelessness into hope through the power of Christ",
-  },
-];
-
-const blogImages = [
-  "/assests/children1.png",
-  "/assests/children2.png",
-  "/assests/children3.png",
-  "/assests/elderly1.png",
-  "/assests/child.jpg",
-  "/assests/child1.jpg",
-  "/assests/child2.jpg",
-  "/assests/child3.jpg",
-];
 
 const blogPosts = [
   {
@@ -62,18 +32,6 @@ const blogPosts = [
 ];
 
 export default function Blog() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    speed: 800,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    pauseOnHover: true,
-    dotsClass: "slick-dots !bottom-4",
-  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-white to-primary/10 py-0 flex flex-col items-center">
       {/* Page Title */}

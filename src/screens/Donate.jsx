@@ -1,6 +1,5 @@
-import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import { FaHeart, FaHandHoldingHeart, FaUsers, FaGraduationCap, FaHandsHelping, FaPhone, FaPlay, FaArrowRight, FaStar, FaPrayingHands, FaLightbulb, FaGlobe, FaShieldAlt, FaHandshake, FaSmile, FaBookOpen, FaHome, FaChurch } from "react-icons/fa";
+import { FaHeart, FaHandHoldingHeart, FaUsers, FaGraduationCap, FaHandsHelping, FaPhone, FaPlay, FaArrowRight, FaStar, FaPrayingHands, FaGlobe, FaShieldAlt, FaHandshake, FaSmile, FaBookOpen, FaHome, FaChurch, FaCross, FaEnvelope } from "react-icons/fa";
 
 const images = [
   "/assests/children1.png",
@@ -117,7 +116,91 @@ const values = [
   },
 ];
 
-export default function Home() {
+const donationAreas = [
+  {
+    title: "Education Support",
+    desc: "Help provide quality education to orphans and children from poor families",
+    icon: <FaGraduationCap className="text-4xl" />,
+    amount: "$50",
+    impact: "School fees for one child for 3 months",
+    color: "from-primary-500 to-primary-600",
+    bgColor: "bg-gradient-to-br from-primary-50 to-primary-100"
+  },
+  {
+    title: "Healthcare Services",
+    desc: "Provide quality healthcare for children and elders in poor families",
+    icon: <FaHeart className="text-4xl" />,
+    amount: "$75",
+    impact: "Medical care for one family for 2 months",
+    color: "from-secondary-500 to-secondary-600",
+    bgColor: "bg-gradient-to-br from-secondary-50 to-secondary-100"
+  },
+  {
+    title: "Basic Needs",
+    desc: "Provide clothing and basic necessities to vulnerable families",
+    icon: <FaHome className="text-4xl" />,
+    amount: "$30",
+    impact: "Clothing and food for one family for 1 month",
+    color: "from-success-500 to-success-600",
+    bgColor: "bg-gradient-to-br from-success-50 to-success-100"
+  },
+  {
+    title: "Gospel Outreach",
+    desc: "Support crusades, church programs, and door-to-door evangelism",
+    icon: <FaCross className="text-4xl" />,
+    amount: "$100",
+    impact: "Support for one community crusade or church program",
+    color: "from-accent-500 to-accent-600",
+    bgColor: "bg-gradient-to-br from-accent-50 to-accent-100"
+  }
+];
+
+const impactStories = [
+  {
+    name: "Joyce Katiiti",
+    role: "Founder & CEO",
+    story: "We started with nothing but faith during COVID-19. When I saw children suffering from hunger on social media, I knew I had to act. Today, we've transformed hundreds of lives through the Gospel and practical support.",
+    impact: "Founded the organization in 2020",
+    avatar: "JK"
+  },
+  {
+    name: "Grandmother's Story",
+    role: "Beneficiary Family",
+    story: "When we met the 70-year-old grandmother caring for her four orphaned grandchildren, they had no beds, no food, and no hope. Today, those children are back in school and thriving.",
+    impact: "Family of 5 supported since 2020",
+    avatar: "GS"
+  },
+  {
+    name: "Blind Father's Family",
+    role: "Beneficiary Family",
+    story: "We supported a family where the father is blind and cannot work. The mother couldn't afford school fees. Now, one child has graduated high school and another is still studying.",
+    impact: "2 children back in school",
+    avatar: "BF"
+  }
+];
+
+const contactInfo = [
+  {
+    name: "Joyce Katiiti",
+    role: "CEO",
+    phone: "+781 3302611",
+    email: "joyce@hopechildrenuganda.org"
+  },
+  {
+    name: "Nakimera Lilian",
+    role: "Head of Human Resources",
+    phone: "+256 701 342803",
+    email: "lilian@hopechildrenuganda.org"
+  },
+  {
+    name: "Edith Mbekeka",
+    role: "Coordinator",
+    phone: "+256 766613051",
+    email: "edith@hopechildrenuganda.org"
+  }
+];
+
+export default function Donate() {
   const settings = {
     dots: true,
     infinite: true,
@@ -133,369 +216,163 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Custom CSS for animations */}
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-        @keyframes gradient {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        @keyframes fade-in-down {
-          from { opacity: 0; transform: translateY(-30px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes shimmer {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
-        }
-        .animate-float { animation: float 3s ease-in-out infinite; }
-        .animate-gradient { 
-          background-size: 200% 200%;
-          animation: gradient 3s ease infinite;
-        }
-        .animate-fade-in-down { animation: fade-in-down 1s ease-out; }
-        .animate-shimmer { animation: shimmer 2s infinite; }
-      `}</style>
-
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-secondary-50">
       {/* Hero Section */}
-      <Slider {...settings}>
-        {images.map((src, index) => (
-          <div key={index}>
-            <div
-              className="min-h-screen bg-cover bg-center relative"
-              style={{ backgroundImage: `url(${src})` }}
-            >
-              {/* Enhanced Multi-Layer Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-primary-900/90"></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
-              
-              {/* Animated Background Elements */}
-              <div className="absolute top-20 left-10 w-24 h-24 bg-primary-500/20 rounded-full blur-2xl animate-pulse"></div>
-              <div className="absolute bottom-40 right-20 w-40 h-40 bg-secondary-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
-              <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-accent-500/15 rounded-full blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
-              <div className="absolute bottom-1/3 right-1/4 w-20 h-20 bg-success-500/15 rounded-full blur-2xl animate-pulse" style={{animationDelay: '0.5s'}}></div>
-              
-              {/* Floating Particles */}
-              <div className="absolute inset-0 overflow-hidden">
-                {[...Array(8)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute w-2 h-2 bg-white/30 rounded-full animate-float"
-                    style={{
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                      animationDelay: `${Math.random() * 3}s`,
-                      animationDuration: `${3 + Math.random() * 2}s`,
-                    }}
-                  ></div>
-                ))}
-              </div>
-              
-              <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
-                <div className="max-w-7xl mx-auto">
-                  {/* Enhanced Badge */}
-                  <div className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-xl text-white px-8 py-4 rounded-full mb-12 border border-white/30 shadow-2xl animate-fade-in-down">
-                    <FaPrayingHands className="text-primary-300 animate-pulse" />
-                    <span className="font-semibold text-lg">Serving Uganda Since 2020</span>
-                    <div className="w-2 h-2 bg-primary-300 rounded-full animate-ping"></div>
-                  </div>
-                  
-                  {/* Enhanced Main Heading */}
-                  <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-6 md:mb-10 text-white leading-tight md:leading-none tracking-tight">
-                    <span className="bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 bg-clip-text text-transparent animate-gradient">
-                      Bringing Hope
-                    </span>
-                    <br />
-                    <span className="text-white drop-shadow-2xl relative">
-                      to the Hopeless
-                      <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary-400 to-secondary-400 rounded-full"></div>
-                    </span>
-                  </h1>
-                  
-                  {/* Enhanced Subtitle */}
-                  <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-3xl md:max-w-5xl mx-auto mb-8 md:mb-16 text-white/95 drop-shadow-xl leading-relaxed font-light">
-                    We serve orphans, vulnerable children, the elderly, and women in need across Uganda, 
-                    <span className="text-primary-200 font-semibold"> rooted in the Gospel of our Lord Jesus Christ.</span>
-                  </p>
-                  
-                  {/* Enhanced CTA Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center items-center mb-8 md:mb-20 pb-8 md:pb-0">
-                    <Link
-                      to="/donate"
-                      className="group relative bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-6 px-12 rounded-3xl text-2xl font-bold hover:from-primary-600 hover:to-secondary-600 transition-all duration-700 shadow-2xl hover:shadow-3xl transform hover:scale-110 hover:-translate-y-2 overflow-hidden"
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-secondary-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left animate-shimmer"></div>
-                      <span className="relative flex items-center gap-4">
-                        <FaHeart className="group-hover:animate-pulse group-hover:scale-110 transition-transform duration-300" />
-                        Donate Now
-                        <FaArrowRight className="group-hover:translate-x-2 transition-transform duration-300" />
-                      </span>
-                    </Link>
-                    
-                    <Link
-                      to="/about"
-                      className="group bg-white/10 backdrop-blur-xl text-white py-6 px-12 rounded-3xl text-2xl font-semibold hover:bg-white/20 transition-all duration-700 border-2 border-white/30 hover:border-white/60 transform hover:scale-105 shadow-xl hover:shadow-2xl"
-                    >
-                      <span className="flex items-center gap-4">
-                        <FaPlay className="text-primary-300 group-hover:scale-110 transition-transform duration-300" />
-                        Learn Our Story
-                      </span>
-                    </Link>
-                  </div>
-                  
-                  {/* Enhanced Scroll Indicator */}
-                  <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
-                    <div className="flex flex-col items-center gap-2">
-                      <span className="text-white/70 text-sm font-medium">Scroll to explore</span>
-                      <div className="w-8 h-12 border-2 border-white/40 rounded-full flex justify-center relative">
-                        <div className="w-1.5 h-4 bg-white/80 rounded-full mt-2 animate-pulse"></div>
-                        <div className="absolute inset-0 border-2 border-white/20 rounded-full animate-ping"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </Slider>
-
-      {/* Enhanced Impact Stats Section */}
-      <div className="relative z-20 -mt-32 pb-24">
-        <div className="max-w-8xl mx-auto px-4">
-          <div className="bg-white/95 backdrop-blur-2xl rounded-4xl shadow-3xl border border-white/50 p-12 md:p-20 relative overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-50/30 to-secondary-50/30"></div>
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-400 to-secondary-400"></div>
-            
-            <div className="relative z-10">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-6xl font-black text-dark-800 mb-6">
-                  Our <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">Impact</span>
-                </h2>
-                <p className="text-xl text-dark-600 max-w-3xl mx-auto leading-relaxed">
-                  Transforming lives through faith, love, and dedicated service across Uganda
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                {impactStats.map((stat, idx) => (
-                  <div 
-                    key={stat.label}
-                    className={`${stat.bgColor} rounded-3xl p-8 text-center group hover:transform hover:scale-110 transition-all duration-700 shadow-xl hover:shadow-2xl border border-white/50`}
-                    style={{animationDelay: `${idx * 0.2}s`}}
-                  >
-                    <div className={`text-5xl md:text-6xl font-black mb-4 ${stat.color} group-hover:scale-125 transition-transform duration-500`}>
-                      {stat.number}
-                    </div>
-                    <div className="text-dark-700 font-semibold text-lg mb-4">{stat.label}</div>
-                    <div className={`text-3xl ${stat.color} opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110`}>
-                      <stat.icon />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Enhanced Services Section */}
-      <div className="py-24 bg-gradient-to-b from-white via-gray-50/50 to-white relative">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-50/20 to-secondary-50/20"></div>
-        
-        <div className="relative z-10 max-w-8xl mx-auto px-4">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-7xl font-black text-dark-800 mb-8">
-              How We <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">Serve</span>
-            </h2>
-            <p className="text-2xl text-dark-600 max-w-4xl mx-auto leading-relaxed">
-              Our comprehensive approach addresses the physical, spiritual, and emotional needs 
-              of Uganda's most vulnerable communities through dedicated programs and services.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, idx) => (
-              <div 
-                key={service.title}
-                className={`${service.bgColor} rounded-4xl p-10 hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-6 group cursor-pointer border border-white/50 relative overflow-hidden`}
-                style={{animationDelay: `${idx * 0.15}s`}}
-              >
-                {/* Hover Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
-                
-                <div className={`${service.iconColor} mb-8 group-hover:scale-125 transition-transform duration-500`}>
-                  {service.icon}
-                </div>
-                
-                <h3 className="text-2xl font-black text-dark-800 mb-6">{service.title}</h3>
-                <p className="text-dark-600 mb-8 leading-relaxed text-lg">{service.desc}</p>
-                
-                {/* Features List */}
-                <div className="mb-8">
-                  {service.features.map((feature, index) => (
-                    <div key={index} className="flex items-center gap-3 mb-3">
-                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.gradient}`}></div>
-                      <span className="text-dark-600 font-medium">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                <Link
-                  to="/services"
-                  className={`inline-flex items-center gap-3 bg-gradient-to-r ${service.color} text-white py-4 px-8 rounded-2xl font-bold hover:shadow-xl transition-all duration-500 transform hover:scale-105`}
-                >
-                  Learn More
-                  <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Enhanced Testimonials Section */}
-      <div className="py-24 bg-gradient-to-r from-primary-600 to-secondary-600 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-700/50 to-secondary-700/50"></div>
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-400 to-success-400"></div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-7xl font-black text-white mb-8">
-              Stories of <span className="text-accent-300">Transformation</span>
-            </h2>
-            <p className="text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              Real stories from our community showing the impact of hope, love, and faith in action.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {testimonials.map((testimonial, idx) => (
-              <div 
-                key={testimonial.name}
-                className="bg-white/10 backdrop-blur-2xl rounded-4xl p-10 border border-white/20 hover:bg-white/20 transition-all duration-700 transform hover:-translate-y-4 hover:shadow-2xl group"
-                style={{animationDelay: `${idx * 0.3}s`}}
-              >
-                <div className="flex gap-2 mb-6">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <FaStar key={i} className="text-yellow-400 text-lg" />
-                  ))}
-                </div>
-                
-                <p className="text-white/95 mb-8 leading-relaxed text-lg italic">"{testimonial.text}"</p>
-                
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <div className="font-bold text-white text-xl">{testimonial.name}</div>
-                    <div className="text-white/70 text-lg">{testimonial.role}</div>
-                    <div className="text-white/50 text-sm">{testimonial.story}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* New Values Section */}
-      <div className="py-24 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-7xl font-black text-dark-800 mb-8">
-              Our <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">Values</span>
-            </h2>
-            <p className="text-2xl text-dark-600 max-w-4xl mx-auto leading-relaxed">
-              The principles that guide our mission and shape our impact in the community.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, idx) => (
-              <div 
-                key={value.title}
-                className="bg-white rounded-4xl p-10 text-center shadow-xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-4 group border border-gray-100"
-                style={{animationDelay: `${idx * 0.2}s`}}
-              >
-                <div className={`text-${value.color.split('-')[1]}-600 mb-6 group-hover:scale-125 transition-transform duration-500`}>
-                  {value.icon}
-                </div>
-                <h3 className="text-2xl font-black text-dark-800 mb-4">{value.title}</h3>
-                <p className="text-dark-600 leading-relaxed text-lg">{value.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Enhanced Call to Action */}
-      <div className="py-24 bg-gradient-to-br from-dark-900 via-dark-800 to-primary-900 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-60 h-60 bg-primary-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-secondary-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-accent-500/15 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}}></div>
-        </div>
-        
-        <div className="relative z-10 max-w-6xl mx-auto text-center px-4">
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-10">
-            Join Us in Making a <span className="bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">Difference</span>
-          </h2>
-          <p className="text-2xl text-white/90 mb-16 leading-relaxed max-w-5xl mx-auto">
-            Every donation, prayer, and partnership helps us bring hope to more families in Uganda. 
-            Together, we can transform lives through the love of Christ and create lasting change in our communities.
+      <div className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center bg-gradient-to-r from-primary-600 to-secondary-600 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{backgroundImage: 'url(/assests/children1.png)'}} />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-secondary-900/80"></div>
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-extrabold drop-shadow-2xl mb-6 animate-fade-in-up">
+            Make a <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">Difference</span>
+          </h1>
+          <p className="text-xl md:text-2xl font-semibold max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            Your donation helps us bring hope to the hopeless through the Gospel of Jesus Christ and practical support.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-16">
-            <Link
-              to="/donate"
-              className="group relative bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-7 px-16 rounded-3xl text-2xl font-black hover:from-primary-600 hover:to-secondary-600 transition-all duration-700 shadow-2xl hover:shadow-3xl transform hover:scale-110 hover:-translate-y-2 overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-secondary-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left animate-shimmer"></div>
-              <span className="relative flex items-center gap-4">
-                <FaHeart className="group-hover:animate-pulse group-hover:scale-110 transition-transform duration-300" />
-                Make a Donation
-                <FaArrowRight className="group-hover:translate-x-2 transition-transform duration-300" />
-              </span>
-            </Link>
-            
-            <Link
-              to="/contact"
-              className="group bg-transparent text-white py-7 px-16 rounded-3xl text-2xl font-bold hover:bg-white/10 transition-all duration-700 border-3 border-white/30 hover:border-white/60 transform hover:scale-105 shadow-xl hover:shadow-2xl"
-            >
-              <span className="flex items-center gap-4">
-                <FaPhone className="text-primary-300 group-hover:scale-110 transition-transform duration-300" />
-                Get Involved
-              </span>
-            </Link>
-          </div>
-          
-          <div className="text-white/70 text-lg">
-            <p className="mb-6">Your support makes a real difference in the lives of vulnerable children and families.</p>
-            <div className="flex justify-center items-center gap-8 text-3xl mb-8">
-              <FaSmile className="text-accent-300 animate-pulse hover:scale-125 transition-transform duration-300 cursor-pointer" />
-              <FaHandshake className="text-success-300 animate-pulse hover:scale-125 transition-transform duration-300 cursor-pointer" style={{animationDelay: '0.5s'}} />
-              <FaBookOpen className="text-primary-300 animate-pulse hover:scale-125 transition-transform duration-300 cursor-pointer" style={{animationDelay: '1s'}} />
-              <FaHome className="text-secondary-300 animate-pulse hover:scale-125 transition-transform duration-300 cursor-pointer" style={{animationDelay: '1.5s'}} />
+        </div>
+      </div>
+
+      {/* Impact Section */}
+      <div className="relative z-20 -mt-20 pb-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="bg-white rounded-3xl shadow-large border border-primary-100 p-8 md:p-12">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full mb-4">
+                <FaHeart className="text-2xl text-white" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">Your Impact</h2>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 max-w-2xl mx-auto">
-              <p className="text-white/90 text-center font-medium">
-                "For I was hungry and you gave me food, I was thirsty and you gave me drink, 
-                I was a stranger and you welcomed me." - Matthew 25:35
+            <div className="prose prose-lg max-w-none text-dark-600 leading-relaxed text-center">
+              <p className="text-xl mb-6">
+                Since 2020, we have transformed the lives of hundreds of children, elderly, and families in Uganda. 
+                Your donation directly supports our mission to bring hope to the hopeless through the Gospel of Jesus Christ.
+              </p>
+              <p className="text-lg">
+                We started with no resources, just faith and compassion. Today, we provide education, healthcare, clothing, 
+                and spiritual support to vulnerable communities across Uganda.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Donation Areas */}
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-800 mb-4">How Your Donation Helps</h2>
+          <p className="text-xl text-dark-600 max-w-3xl mx-auto">
+            Every dollar makes a real difference in the lives of vulnerable children and families in Uganda.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {donationAreas.map((area, index) => (
+            <div 
+              key={area.title}
+              className={`${area.bgColor} rounded-2xl p-8 text-center hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up`}
+              style={{animationDelay: `${index * 0.1}s`}}
+            >
+              <div className={`${area.color} mb-6`}>
+                {area.icon}
+              </div>
+              <h3 className="text-2xl font-bold text-dark-800 mb-4">{area.title}</h3>
+              <p className="text-dark-600 mb-6 leading-relaxed">{area.desc}</p>
+              <div className="text-3xl font-bold text-primary-600 mb-2">{area.amount}</div>
+              <div className="text-sm text-dark-500">{area.impact}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Impact Stories */}
+      <div className="bg-gradient-to-r from-primary-600 to-secondary-600 py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Stories of Transformation</h2>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Real stories showing the impact of your support in the lives of vulnerable families.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {impactStories.map((story, index) => (
+              <div 
+                key={story.name}
+                className="bg-white/10 backdrop-blur-2xl rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up"
+                style={{animationDelay: `${index * 0.2}s`}}
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                    {story.avatar}
+                  </div>
+                  <div>
+                    <div className="font-bold text-white text-xl">{story.name}</div>
+                    <div className="text-white/70 text-lg">{story.role}</div>
+                  </div>
+                </div>
+                <p className="text-white/95 mb-6 leading-relaxed italic">"{story.story}"</p>
+                <div className="text-white/70 text-sm">{story.impact}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Information */}
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-800 mb-4">Contact Us</h2>
+          <p className="text-xl text-dark-600 max-w-3xl mx-auto">
+            Get in touch with our team to learn more about our work or discuss partnership opportunities.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {contactInfo.map((contact, index) => (
+            <div 
+              key={contact.name}
+              className="bg-white rounded-2xl shadow-large p-8 text-center hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up"
+              style={{animationDelay: `${index * 0.2}s`}}
+            >
+              <div className="w-24 h-24 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl text-white font-bold">{contact.name.charAt(0)}</span>
+              </div>
+              <h3 className="text-2xl font-bold text-dark-800 mb-2">{contact.name}</h3>
+              <p className="text-primary-600 font-semibold mb-6">{contact.role}</p>
+              <div className="space-y-3">
+                <div className="flex items-center justify-center gap-2 text-dark-500">
+                  <FaPhone className="text-sm" />
+                  <span className="text-sm">{contact.phone}</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-dark-500">
+                  <FaEnvelope className="text-sm" />
+                  <span className="text-sm">{contact.email}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="bg-gradient-to-r from-primary-600 to-secondary-600 py-16">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Join Us in Making a Difference
+          </h2>
+          <p className="text-xl text-white/90 mb-8 leading-relaxed">
+            Every donation, prayer, and partnership helps us bring hope to more families in Uganda. 
+            Together, we can transform lives through the love of Christ.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:joyce@hopechildrenuganda.org"
+              className="bg-white text-primary-600 py-4 px-8 rounded-2xl text-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-large hover:shadow-2xl transform hover:scale-105"
+            >
+              Contact Us
+            </a>
+            <a
+              href="tel:+7813302611"
+              className="bg-transparent text-white py-4 px-8 rounded-2xl text-xl font-semibold hover:bg-white/10 transition-all duration-300 border-2 border-white/30 hover:border-white/60"
+            >
+              Call Now
+            </a>
           </div>
         </div>
       </div>
