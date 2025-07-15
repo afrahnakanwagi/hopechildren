@@ -22,15 +22,15 @@ const Footer = () => {
               Founded in 2020, we serve Uganda's most vulnerable with compassion and faith.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-110" aria-label="Facebook">
+              {/* <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center hover:from-primary-600 hover:to-primary-700 transition-all duration-300 transform hover:scale-110" aria-label="Facebook">
                 <FaFacebookF size={16} />
-              </a>
+              </a> */}
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-lg flex items-center justify-center hover:from-secondary-600 hover:to-secondary-700 transition-all duration-300 transform hover:scale-110" aria-label="Twitter">
                 <FaTwitter size={16} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-accent-500 to-accent-600 rounded-lg flex items-center justify-center hover:from-accent-600 hover:to-accent-700 transition-all duration-300 transform hover:scale-110" aria-label="Instagram">
+              {/* <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-accent-500 to-accent-600 rounded-lg flex items-center justify-center hover:from-accent-600 hover:to-accent-700 transition-all duration-300 transform hover:scale-110" aria-label="Instagram">
                 <FaInstagram size={16} />
-              </a>
+              </a> */}
               <a href="https://wa.me/25670134280" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gradient-to-br from-success-500 to-success-600 rounded-lg flex items-center justify-center hover:from-success-600 hover:to-success-700 transition-all duration-300 transform hover:scale-110" aria-label="WhatsApp">
                 <FaWhatsapp size={16} />
               </a>

@@ -4,7 +4,7 @@ const blogPosts = [
   {
     title: "Transforming Lives: Our Journey So Far",
     excerpt: "Discover how Hope Children has impacted hundreds of lives in Uganda through faith, compassion, and action.",
-    image: "/assests/children1.png",
+    image: "/assests/child.jpg",
     date: "2024-05-01",
     link: "#"
   },
@@ -18,14 +18,14 @@ const blogPosts = [
   {
     title: "Caring for the Elderly: A Community Effort",
     excerpt: "Learn how our outreach supports the elderly with dignity and love.",
-    image: "/assests/elderly1.png",
+    image: "/assests/chi2.jpg",
     date: "2024-03-20",
     link: "#"
   },
   {
     title: "Gallery Moments: Joy in Pictures",
     excerpt: "A visual journey through our most memorable moments of hope and transformation.",
-    image: "/assests/children3.png",
+    image: "/assests/chi1.jpg",
     date: "2024-02-10",
     link: "#"
   },

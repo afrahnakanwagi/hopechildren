@@ -1,10 +1,8 @@
 import Slider from "react-slick";
 
 const galleryImages = [
-  "/assests/children1.png",
-  "/assests/children2.png",
-  "/assests/children3.png",
-  "/assests/elderly1.png",
+  "/assests/chi1.jpg",
+  "/assests/chi2.jpg",
   "/assests/child.jpg",
   "/assests/child1.jpg",
   "/assests/child2.jpg",

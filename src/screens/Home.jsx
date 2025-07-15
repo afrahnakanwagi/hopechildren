@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 import { FaHeart, FaHandHoldingHeart, FaUsers, FaGraduationCap, FaHandsHelping, FaPhone, FaPlay, FaArrowRight, FaStar, FaPrayingHands, FaLightbulb, FaGlobe, FaShieldAlt, FaHandshake, FaSmile, FaBookOpen, FaHome, FaChurch } from "react-icons/fa";
 
 const images = [
-  "/assests/children1.png",
-  "/assests/children2.png",
-  "/assests/children3.png",
-  "/assests/elderly1.png",
+  "/assests/chi1.jpg",
+  "/assests/chi2.jpg",
   "/assests/child.jpg",
   "/assests/child1.jpg",
   "/assests/child2.jpg",
@@ -159,6 +157,19 @@ export default function Home() {
         }
         .animate-fade-in-down { animation: fade-in-down 1s ease-out; }
         .animate-shimmer { animation: shimmer 2s infinite; }
+        .hero-section {
+          background-size: cover;
+          background-position: center;
+          min-height: 100vh;
+          max-height: 1200px;
+        }
+        @media (max-width: 640px) {
+          .hero-section {
+            background-size: contain;
+            background-repeat: no-repeat;
+            min-height: 60vh;
+          }
+        }
       `}</style>
 
       {/* Hero Section */}
@@ -166,7 +177,7 @@ export default function Home() {
         {images.map((src, index) => (
           <div key={index}>
             <div
-              className="min-h-screen bg-cover bg-center relative"
+              className="hero-section relative"
               style={{ backgroundImage: `url(${src})` }}
             >
               {/* Enhanced Multi-Layer Overlay */}
@@ -224,26 +235,25 @@ export default function Home() {
                   </p>
                   
                   {/* Enhanced CTA Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center items-center mb-8 md:mb-20 pb-8 md:pb-0">
+                  <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-28 pb-8 md:pb-0 z-20 relative">
                     <Link
                       to="/donate"
-                      className="group relative bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-6 px-12 rounded-3xl text-2xl font-bold hover:from-primary-600 hover:to-secondary-600 transition-all duration-700 shadow-2xl hover:shadow-3xl transform hover:scale-110 hover:-translate-y-2 overflow-hidden"
+                      className="group relative bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-6 px-12 rounded-3xl text-2xl font-bold shadow-2xl hover:scale-110 transition-all duration-300 border-2 border-white/30"
+                      style={{ minWidth: '220px' }}
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-secondary-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left animate-shimmer"></div>
                       <span className="relative flex items-center gap-4">
-                        <FaHeart className="group-hover:animate-pulse group-hover:scale-110 transition-transform duration-300" />
+                        <FaHeart className="group-hover:animate-pulse" />
                         Donate Now
-                        <FaArrowRight className="group-hover:translate-x-2 transition-transform duration-300" />
+                        <FaArrowRight />
                       </span>
                     </Link>
-                    
                     <Link
                       to="/about"
-                      className="group bg-white/10 backdrop-blur-xl text-white py-6 px-12 rounded-3xl text-2xl font-semibold hover:bg-white/20 transition-all duration-700 border-2 border-white/30 hover:border-white/60 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+                      className="group bg-white/20 backdrop-blur-xl text-white py-6 px-12 rounded-3xl text-2xl font-semibold shadow-xl hover:scale-105 transition-all duration-300 border-2 border-white/30"
+                      style={{ minWidth: '220px' }}
                     >
                       <span className="flex items-center gap-4">
-                        <FaPlay className="text-primary-300 group-hover:scale-110 transition-transform duration-300" />
+                        <FaPlay className="text-primary-300" />
                         Learn Our Story
                       </span>
                     </Link>
@@ -267,7 +277,7 @@ export default function Home() {
       </Slider>
 
       {/* Enhanced Impact Stats Section */}
-      <div className="relative z-20 -mt-32 pb-24">
+      <div className="relative z-20 -mt-12 pb-0">
         <div className="max-w-8xl mx-auto px-4">
           <div className="bg-white/95 backdrop-blur-2xl rounded-4xl shadow-3xl border border-white/50 p-12 md:p-20 relative overflow-hidden">
             {/* Background Pattern */}

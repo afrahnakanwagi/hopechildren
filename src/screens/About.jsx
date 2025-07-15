@@ -132,7 +132,7 @@ export default function About() {
       {/* Hero Section */}
       <div className="relative w-full min-h-screen flex items-center justify-center">
         {/* Background Image with Enhanced Overlay */}
-        <div className="absolute inset-0 bg-cover bg-center z-0" style={{backgroundImage: 'url(/assests/children1.png)'}} />
+        <div className="absolute inset-0 bg-cover bg-center z-0" style={{backgroundImage: 'url(/assests/child1.jpg)'}} />
         <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/80 to-secondary-900/90 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40 z-10"></div>
