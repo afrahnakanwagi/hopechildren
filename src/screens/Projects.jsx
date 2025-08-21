@@ -61,7 +61,7 @@ const futureProjects = [
     status: "Planning",
     description: "Establish centers that empower women with practical skills, enabling them to build sustainable livelihoods.",
     timeline: "2025-2026",
-    budget: "₦50,000,000",
+    budget: "$33,000",
     color: "from-accent-500 to-accent-600",
     details: [
       "Skills training in tailoring, cooking, and crafts",
@@ -84,7 +84,7 @@ const futureProjects = [
     status: "Planning",
     description: "Building a safe haven for girls who have experienced abuse, providing shelter, education, and emotional support.",
     timeline: "2026-2027",
-    budget: "₦75,000,000",
+    budget: "$50,000",
     color: "from-warning-500 to-warning-600",
     details: [
       "Safe and secure residential facilities",
@@ -107,7 +107,7 @@ const futureProjects = [
     status: "Planning",
     description: "Launch a center dedicated to helping youth affected by drugs and alcohol, offering counseling and spiritual guidance.",
     timeline: "2027-2028",
-    budget: "₦60,000,000",
+    budget: "$40,000",
     color: "from-purple-500 to-purple-600",
     details: [
       "Medical detoxification and treatment",
@@ -130,7 +130,7 @@ const futureProjects = [
     status: "Planning",
     description: "Expanding our reach to share the Gospel and support more communities through crusades and evangelism.",
     timeline: "2025-2028",
-    budget: "₦30,000,000",
+    budget: "$20,000",
     color: "from-primary-500 to-accent-500",
     details: [
       "Community crusades and revival meetings",
@@ -152,7 +152,7 @@ const futureProjects = [
 const projectStats = [
   { number: "3", label: "Active Projects", icon: <FaHandsHelping /> },
   { number: "4", label: "Future Projects", icon: <FaGlobe /> },
-  { number: "USD215M", label: "Total Budget Needed", icon: <FaDollarSign /> },
+  { number: "$143k", label: "Total Budget Needed", icon: <FaDollarSign /> },
   { number: "4", label: "Years Timeline", icon: <FaCalendarAlt /> }
 ];
 
@@ -272,7 +272,7 @@ export default function Projects() {
                 <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <div className="text-2xl text-white"><FaDollarSign /></div>
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-dark-800 mb-2">₦215M</div>
+                <div className="text-3xl md:text-4xl font-bold text-dark-800 mb-2">$215M</div>
                 <div className="text-dark-600 font-medium">Total Budget Needed</div>
               </div>
               <div className="text-center animate-fade-in-up" style={{animationDelay: '0.3s'}}>

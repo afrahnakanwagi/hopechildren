@@ -130,7 +130,7 @@ const donationAreas = [
     title: "Healthcare Services",
     desc: "Provide quality healthcare for children and elders in poor families",
     icon: <FaHeart className="text-4xl" />,
-    amount: "$75",
+    amount: "$40",
     impact: "Medical care for one family for 2 months",
     color: "from-secondary-500 to-secondary-600",
     bgColor: "bg-gradient-to-br from-secondary-50 to-secondary-100"
@@ -139,7 +139,7 @@ const donationAreas = [
     title: "Basic Needs",
     desc: "Provide clothing and basic necessities to vulnerable families",
     icon: <FaHome className="text-4xl" />,
-    amount: "$30",
+    amount: "$20",
     impact: "Clothing and food for one family for 1 month",
     color: "from-success-500 to-success-600",
     bgColor: "bg-gradient-to-br from-success-50 to-success-100"
