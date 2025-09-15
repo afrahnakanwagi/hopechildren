@@ -22,12 +22,14 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-medium group-hover:shadow-large transition-all duration-300">
-              <span className="text-white text-xl font-bold">H</span>
-            </div>
+            <img
+              src="/assests/logo 2.jpg"
+              alt="Hope Christian Foundation logo"
+              className="h-12 md:h-14 w-auto object-contain shrink-0"
+            />
             <div>
               <h1 className="text-xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-                Hope Foundation
+                Hope Christian Foundation
               </h1>
               <p className="text-xs text-dark-500 -mt-1">Christian Foundation Uganda</p>
             </div>
@@ -47,9 +49,9 @@ export default function Navbar() {
             ))}
             <Link
               to="/donate"
-              className="ml-4 px-6 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-semibold hover:from-primary-600 hover:to-primary-700 transform hover:scale-105 transition-all duration-300 shadow-medium hover:shadow-large"
+              className="ml-3 px-4 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-md font-medium hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-medium"
             >
-              Donate Now
+              <span className="text-sm">Donate</span>
             </Link>
           </div>
 
@@ -80,10 +82,10 @@ export default function Navbar() {
               ))}
               <Link
                 to="/donate"
-                className="block mt-4 mx-3 px-4 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-semibold text-center hover:from-primary-600 hover:to-primary-700 transition-all duration-300"
+                className="block mt-4 mx-3 px-3 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-md font-medium text-sm text-center hover:from-primary-600 hover:to-primary-700 transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
-                Donate Now
+                Donate
               </Link>
             </div>
           </div>
