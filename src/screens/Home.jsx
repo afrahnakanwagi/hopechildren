@@ -12,9 +12,9 @@ const images = [
 ];
 
 const impactStats = [
-  { number: "500+", label: "Children Helped", icon: FaHeart, color: "text-primary-600", bgColor: "bg-gradient-to-br from-primary-50 to-primary-100" },
-  { number: "50+", label: "Elderly Supported", icon: FaHandHoldingHeart, color: "text-secondary-600", bgColor: "bg-gradient-to-br from-secondary-50 to-secondary-100" },
-  { number: "100+", label: "Women Empowered", icon: FaUsers, color: "text-success-600", bgColor: "bg-gradient-to-br from-success-50 to-success-100" },
+  { number: "10+", label: "Children Helped", icon: FaHeart, color: "text-primary-600", bgColor: "bg-gradient-to-br from-primary-50 to-primary-100" },
+  { number: "10+", label: "Elderly Supported", icon: FaHandHoldingHeart, color: "text-secondary-600", bgColor: "bg-gradient-to-br from-secondary-50 to-secondary-100" },
+  { number: "10+", label: "Women Empowered", icon: FaUsers, color: "text-success-600", bgColor: "bg-gradient-to-br from-success-50 to-success-100" },
   { number: "4", label: "Years of Service", icon: FaStar, color: "text-accent-600", bgColor: "bg-gradient-to-br from-accent-50 to-accent-100" },
 ];
 
@@ -212,7 +212,7 @@ export default function Home() {
                   {/* Enhanced Badge */}
                   <div className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-xl text-white px-8 py-4 rounded-full mb-12 border border-white/30 shadow-2xl animate-fade-in-down">
                     <FaPrayingHands className="text-primary-300 animate-pulse" />
-                    <span className="font-semibold text-lg">Serving Uganda Since 2020</span>
+                    <span className="font-semibold text-lg">Serving Africa.</span>
                     <div className="w-2 h-2 bg-primary-300 rounded-full animate-ping"></div>
                   </div>
                   

@@ -13,9 +13,9 @@ const images = [
 ];
 
 const impactStats = [
-  { number: "500+", label: "Children Helped", icon: FaHeart, color: "text-primary-600", bgColor: "bg-gradient-to-br from-primary-50 to-primary-100" },
-  { number: "50+", label: "Elderly Supported", icon: FaHandHoldingHeart, color: "text-secondary-600", bgColor: "bg-gradient-to-br from-secondary-50 to-secondary-100" },
-  { number: "100+", label: "Women Empowered", icon: FaUsers, color: "text-success-600", bgColor: "bg-gradient-to-br from-success-50 to-success-100" },
+  { number: "10+", label: "Children Helped", icon: FaHeart, color: "text-primary-600", bgColor: "bg-gradient-to-br from-primary-50 to-primary-100" },
+  { number: "10+", label: "Elderly Supported", icon: FaHandHoldingHeart, color: "text-secondary-600", bgColor: "bg-gradient-to-br from-secondary-50 to-secondary-100" },
+  { number: "10+", label: "Women Empowered", icon: FaUsers, color: "text-success-600", bgColor: "bg-gradient-to-br from-success-50 to-success-100" },
   { number: "4", label: "Years of Service", icon: FaStar, color: "text-accent-600", bgColor: "bg-gradient-to-br from-accent-50 to-accent-100" },
 ];
 
@@ -119,18 +119,18 @@ const values = [
 const donationAreas = [
   {
     title: "Education Support",
-    desc: "Help provide quality education to orphans and children from poor families",
+    desc: "Help provide quality education to orphans and children needy families",
     icon: <FaGraduationCap className="text-4xl" />,
-    amount: "$50",
+    // amount: "$50",
     impact: "School fees for one child for 3 months",
     color: "from-primary-500 to-primary-600",
     bgColor: "bg-gradient-to-br from-primary-50 to-primary-100"
   },
   {
     title: "Healthcare Services",
-    desc: "Provide quality healthcare for children and elders in poor families",
+    desc: "Provide quality healthcare for children and elders in needy families",
     icon: <FaHeart className="text-4xl" />,
-    amount: "$40",
+    // amount: "$40",
     impact: "Medical care for one family for 2 months",
     color: "from-secondary-500 to-secondary-600",
     bgColor: "bg-gradient-to-br from-secondary-50 to-secondary-100"
@@ -139,7 +139,7 @@ const donationAreas = [
     title: "Basic Needs",
     desc: "Provide clothing and basic necessities to vulnerable families",
     icon: <FaHome className="text-4xl" />,
-    amount: "$20",
+    // amount: "$20",
     impact: "Clothing and food for one family for 1 month",
     color: "from-success-500 to-success-600",
     bgColor: "bg-gradient-to-br from-success-50 to-success-100"
@@ -148,7 +148,7 @@ const donationAreas = [
     title: "Gospel Outreach",
     desc: "Support crusades, church programs, and door-to-door evangelism",
     icon: <FaCross className="text-4xl" />,
-    amount: "$100",
+    // amount: "$100",
     impact: "Support for one community crusade or church program",
     color: "from-accent-500 to-accent-600",
     bgColor: "bg-gradient-to-br from-accent-50 to-accent-100"
@@ -243,12 +243,12 @@ export default function Donate() {
             </div>
             <div className="prose prose-lg max-w-none text-dark-600 leading-relaxed text-center">
               <p className="text-xl mb-6">
-                Since 2020, we have transformed the lives of hundreds of children, elderly, and families in Uganda. 
+                Since 2020, we have transformed the lives of hundreds of children, elderly, and families in Africa. 
                 Your donation directly supports our mission to bring hope to the hopeless through the Gospel of Jesus Christ.
               </p>
               <p className="text-lg">
                 We started with no resources, just faith and compassion. Today, we provide education, healthcare, clothing, 
-                and spiritual support to vulnerable communities across Uganda.
+                and spiritual support to vulnerable communities across Africa.
               </p>
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function Donate() {
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-dark-800 mb-4">How Your Donation Helps</h2>
           <p className="text-xl text-dark-600 max-w-3xl mx-auto">
-            Every dollar makes a real difference in the lives of vulnerable children and families in Uganda.
+            Every dollar makes a real difference in the lives of vulnerable children and families in Africa.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -357,7 +357,7 @@ export default function Donate() {
             Join Us in Making a Difference
           </h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Every donation, prayer, and partnership helps us bring hope to more families in Uganda. 
+            Every donation, prayer, and partnership helps us bring hope to more families in Africa. 
             Together, we can transform lives through the love of Christ.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

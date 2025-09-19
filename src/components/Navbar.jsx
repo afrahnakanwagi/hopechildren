@@ -23,7 +23,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <img
-              src="/assests/logo 2.jpg"
+              src="/assests/logo3.png"
               alt="Hope Christian Foundation logo"
               className="h-12 md:h-14 w-auto object-contain shrink-0"
             />

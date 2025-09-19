@@ -84,17 +84,17 @@ const services = [
   },
   {
     title: "Healthcare",
-    description: "Provide good quality Health care for the children and elders who are in poor families and to orphans",
+    description: "Provide good quality Health care for the children and elders who are in needy families and to orphans",
     icon: <FaHeart className="text-3xl" />
   },
   {
     title: "Education",
-    description: "Provide good quality education to orphans and children from poor families",
+    description: "Provide good quality education to orphans and children from needy families",
     icon: <FaBookOpen className="text-3xl" />
   },
   {
     title: "Clothing",
-    description: "Provide clothing's to children and elders in poor families",
+    description: "Provide clothing's to children and elders in needy families",
     icon: <FaHome className="text-3xl" />
   }
 ];
@@ -248,7 +248,7 @@ export default function About() {
             </div>
             <h3 className="text-3xl font-bold text-dark-800 mb-6">Our Mission</h3>
             <p className="text-dark-600 leading-relaxed text-lg">
-              We preach the Gospel of our Lord Jesus Christ through support Crusades, supporting of churches and door to door. We provide good quality Health care for the children and elders who are in poor families and to orphans. We also provide good quality education to orphans and children from poor families. We provide clothing's to children and elders in poor families.
+              We preach the Gospel of our Lord Jesus Christ through support Crusades, supporting of churches and door to door. We provide good quality Health care for the children and elders who are in needy families and to orphans. We also provide good quality education to orphans and children from needy families. We provide clothing's to children and elders in needy families.
             </p>
           </div>
           <div className="bg-white rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 animate-fade-in-up group" style={{animationDelay: '0.2s'}}>
