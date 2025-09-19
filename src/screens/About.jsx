@@ -4,17 +4,17 @@ import { FaHeart, FaUsers, FaGraduationCap, FaHandsHelping, FaPhone, FaEnvelope,
 
 const achievements = [
   {
-    number: "500+",
+    number: "10+",
     label: "Children Helped",
     description: "Access to quality education, healthcare, and emotional support"
   },
   {
-    number: "50+",
+    number: "10+",
     label: "Elderly Supported",
     description: "Healthcare, social activities, and basic needs provided"
   },
   {
-    number: "100+",
+    number: "10+",
     label: "Women Empowered",
     description: "Through skills training and economic opportunities"
   },
