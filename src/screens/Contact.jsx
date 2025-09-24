@@ -6,7 +6,7 @@ const team = [
   {
     name: "Joyce Katiiti",
     role: "Founder & CEO",
-    phone: "+1 (781) 330‑2611",
+    phone: "+1781 330‑2611",
     email: "joyce@hopechildrenuganda.org",
     avatar: "👩🏾‍💼",
     description: "Founded the organization with a vision to bring hope to Uganda's most vulnerable communities. Leads strategic initiatives and oversees all operations.",
@@ -36,15 +36,13 @@ const contactInfo = [
   {
     icon: <FaPhone />,
     title: "Phone",
-    details: ["+1 (781) 330‑2611", "+256 701 342803"],
+    details: ["+1781 330‑2611", "+256 701 342803"],
     description: "Call us for immediate assistance"
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    details: [, "info@hopechildrenuganda.org"],  
-    // " donations@hopechildrenuganda.org"
-   
+    details: ["info@hopechildrenuganda.org"],
     description: "Send us a message anytime"
   },
   {
@@ -133,6 +131,7 @@ export default function Contact() {
           <p className="text-xl md:text-2xl font-semibold max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             Connect with us to learn more about our mission and how you can help make a difference.
           </p>
+          <br /><br />
         </div>
       </div>
 

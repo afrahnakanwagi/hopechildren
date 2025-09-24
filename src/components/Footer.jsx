@@ -100,7 +100,7 @@ const Footer = () => {
                     Joyce Katiti (Founder)
                   </p>
                   <p className="text-sm text-gray-300">
-                    +1 (781) 330-2611
+                    +1781 330-2611
                   </p>
                 </div>
               </div>

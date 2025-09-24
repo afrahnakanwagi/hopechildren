@@ -91,10 +91,10 @@ const services = [
 ];
 
 const impactStats = [
-  { number: "500+", label: "Children Educated", icon: <FaBookOpen /> },
-  { number: "50+", label: "Elderly Cared For", icon: <FaHeartbeat /> },
-  { number: "100+", label: "Women Empowered", icon: <FaGraduationCap /> },
-  { number: "25+", label: "Communities Served", icon: <FaGlobe /> }
+  { number: "10+", label: "Children Educated", icon: <FaBookOpen /> },
+  { number: "10+", label: "Elderly Cared For", icon: <FaHeartbeat /> },
+  { number: "10+", label: "Women Empowered", icon: <FaGraduationCap /> },
+  { number: "5+", label: "Communities Served", icon: <FaGlobe /> }
 ];
 
 // Card slider settings
@@ -177,6 +177,7 @@ export default function Services() {
           <p className="text-xl md:text-2xl font-semibold max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             Comprehensive programs designed to transform lives through the love of Jesus Christ.
           </p>
+          <br /><br />
         </div>
       </div>
 
@@ -209,14 +210,14 @@ export default function Services() {
           <Slider {...{...cardSettings, dots: false}} className="modern-card-slider">
             {services.map((service, idx) => (
               <div key={service.title}>
-                <div className="modern-card glass-card rounded-3xl shadow-2xl p-10 flex flex-col items-center text-center transition-transform duration-500 hover:-translate-y-3 hover:shadow-3xl group border-2" style={{animationDelay: `${idx * 0.1}s`, minHeight: 440, height: 440, margin: '0 16px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderImage: 'linear-gradient(135deg, #f59e42 10%, #6dd5ed 90%) 1'}}>
+                <div className="modern-card glass-card rounded-3xl shadow-2xl p-10 flex flex-col items-center text-center transition-transform duration-500 hover:-translate-y-3 hover:shadow-3xl group border-2" style={{animationDelay: `${idx * 0.1}s`, minHeight: 580, height: 580, margin: '0 16px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderImage: 'linear-gradient(135deg, #f59e42 10%, #6dd5ed 90%) 1'}}>
                   <div>
                     <div className="mb-6 p-4 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full shadow-lg flex items-center justify-center glass-icon" style={{width: 80, height: 80, backdropFilter: 'blur(8px)', border: '2px solid #f59e42'}}>
                       {service.icon}
                     </div>
                     <h3 className="text-2xl font-extrabold text-dark-800 mb-2 group-hover:text-primary-600 transition-colors duration-300 tracking-tight" style={{letterSpacing: '-0.5px'}}>{service.title}</h3>
                     <p className="text-lg font-semibold mb-2 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent" style={{letterSpacing: '0.2px'}}>{service.subtitle}</p>
-                    <p className="text-dark-700 mb-4 leading-relaxed text-base font-medium" style={{minHeight: 60, color: 'rgba(30,30,40,0.85)'}}>{service.desc}</p>
+                    <p className="text-dark-700 mb-4 leading-relaxed text-base font-medium" style={{minHeight: 120, color: 'rgba(30,30,40,0.85)'}}>{service.desc}</p>
                   </div>
                   <div className="w-full flex-1 flex flex-col justify-end">
                     <div className="flex flex-wrap gap-2 justify-center mb-4">
@@ -296,8 +297,8 @@ export default function Services() {
     background: linear-gradient(135deg, #f59e42 10%, #6dd5ed 90%);
     box-shadow: 0 4px 16px #f59e4233;
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    width: 58px;
+    height: 58px;
     display: flex;
     align-items: center;
     justify-content: center;
