@@ -7,16 +7,16 @@ const team = [
     name: "Joyce Katiiti",
     role: "Founder & CEO",
     phone: "+1 (781) 330‑2611",
-    email: "joyce@hopechildrenuganda.org",
+    email: "katiitijoyce@gmail.com",
     avatar: "👩🏾‍💼",
-    description: "Founded the organization with a vision to bring hope to Uganda's most vulnerable communities. Leads strategic initiatives and oversees all operations.",
+    description: "Founded the organization with a vision to bring hope to the world's most vulnerable communities. Leads strategic initiatives and oversees all operations.",
     specialties: ["Strategic Planning", "Community Outreach", "Partnership Development"]
   },
   {
     name: "Nakimera Lilian",
     role: "Head of Human Resources",
     phone: "+256 701 342803",
-    email: "liliannakimera64@gmail. Com",
+    email: "liliannakimera64@gmail.com",
     avatar: "👩🏾‍💼",
     description: "Oversees our team development, community outreach programs, and ensures the well-being of all staff and volunteers.",
     specialties: ["Team Management", "Community Programs", "Volunteer Coordination"]
@@ -25,7 +25,7 @@ const team = [
     name: "Edith Mbekeka",
     role: "Programs Coordinator",
     phone: "+256 766 613051",
-    email: "edith@hopechildrenuganda.org",
+    email: "hope@hopechristianfoundation.co.site",
     avatar: "👩🏾‍💼",
     description: "Coordinates our educational and empowerment initiatives, ensuring effective program delivery and impact measurement.",
     specialties: ["Education Programs", "Women's Empowerment", "Impact Assessment"]
@@ -42,7 +42,7 @@ const contactInfo = [
   {
     icon: <FaEnvelope />,
     title: "Email",
-    details: [, "info@hopechildrenuganda.org"],  
+    details: [, "hope@hopechristianfoundation.co.site"],  
     // " donations@hopechildrenuganda.org"
    
     description: "Send us a message anytime"
@@ -50,8 +50,8 @@ const contactInfo = [
   {
     icon: <FaMapMarkerAlt />,
     title: "Location",
-    details: ["Kampala, Uganda", "Eastern Region, Uganda"],
-    description: "Serving communities across Uganda"
+    details: ["Kampala, Uganda", ],
+    description: "Serving communities across the world"
   },
   {
     icon: <FaClock />,
@@ -275,7 +275,7 @@ export default function Contact() {
           <div className="animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-6">Meet Our Team</h2>
             <p className="text-lg text-dark-600 mb-8">
-              Our dedicated leadership team is committed to bringing hope and transformation to Uganda's most vulnerable communities.
+              Our dedicated leadership team is committed to bringing hope and transformation to the world's most vulnerable communities.
             </p>
             
             <div className="space-y-6">

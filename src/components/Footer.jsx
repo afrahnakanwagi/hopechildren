@@ -33,7 +33,7 @@ const Footer = () => {
             </div>
             <p className="text-sm text-gray-300 leading-relaxed">
               Bringing hope to the hopeless through the Gospel of Jesus Christ.
-              Founded in 2020, we serve Uganda’s most vulnerable with
+              Founded in 2020, we serve the world’s most vulnerable with
               compassion and faith.
             </p>
 
@@ -256,7 +256,7 @@ const Footer = () => {
             <div className="text-center md:text-right">
               <p className="text-sm text-primary-300 font-medium flex items-center justify-center md:justify-end space-x-1">
                 <FaHeart className="text-primary-400" />
-                <span>Made with love for Uganda’s children</span>
+                <span>Made with love for children</span>
               </p>
             </div>
           </div>

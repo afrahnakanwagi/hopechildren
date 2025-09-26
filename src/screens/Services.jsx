@@ -91,10 +91,10 @@ const services = [
 ];
 
 const impactStats = [
-  { number: "500+", label: "Children Educated", icon: <FaBookOpen /> },
-  { number: "50+", label: "Elderly Cared For", icon: <FaHeartbeat /> },
-  { number: "100+", label: "Women Empowered", icon: <FaGraduationCap /> },
-  { number: "25+", label: "Communities Served", icon: <FaGlobe /> }
+  { number: "Education & Care", label: "Children receiving education", icon: <FaBookOpen /> },
+  { number: "Honor & Support", label: "Elderly cared for with dignity", icon: <FaHeartbeat /> },
+  { number: "Skills & Opportunity", label: "Women empowered through training", icon: <FaGraduationCap /> },
+  { number: "Growing Reach", label: "Communities served in love", icon: <FaGlobe /> }
 ];
 
 // Card slider settings

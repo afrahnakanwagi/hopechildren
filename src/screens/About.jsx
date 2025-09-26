@@ -4,24 +4,9 @@ import { FaHeart, FaUsers, FaGraduationCap, FaHandsHelping, FaPhone, FaEnvelope,
 
 const achievements = [
   {
-    number: "500+",
-    label: "Children Helped",
-    description: "Access to quality education, healthcare, and emotional support"
-  },
-  {
-    number: "50+",
-    label: "Elderly Supported",
-    description: "Healthcare, social activities, and basic needs provided"
-  },
-  {
-    number: "100+",
-    label: "Women Empowered",
-    description: "Through skills training and economic opportunities"
-  },
-  {
-    number: "4",
-    label: "Years of Service",
-    description: "Transforming lives since 2020"
+    number: "Since 2020",
+    label: "Faithful Service",
+    description: "Transforming lives in Uganda through the love of Christ"
   }
 ];
 
@@ -30,21 +15,18 @@ const team = [
     name: "Joyce Katiiti",
     role: "CEO",
     phone: "+781 3302611",
-    email: "joyce@hopechildrenuganda.org",
     description: "Founded the organization in 2020 during COVID-19 to bring hope to the hopeless through the Gospel of Jesus Christ."
   },
   {
     name: "Nakimera Lilian",
-    role: "Head of Human Resources",
+    role: "H/R",
     phone: "+256 701 342803",
-    email: "lilian@hopechildrenuganda.org",
     description: "Oversees team development and community outreach programs."
   },
   {
     name: "Edith Mbekeka",
     role: "Coordinator",
     phone: "+256 766613051",
-    email: "edith@hopechildrenuganda.org",
     description: "Coordinates educational and empowerment initiatives across Uganda."
   }
 ];
@@ -84,17 +66,17 @@ const services = [
   },
   {
     title: "Healthcare",
-    description: "Provide good quality Health care for the children and elders who are in poor families and to orphans",
+    description: "Provide good quality Health care for the children and elders who are in needy families and to orphans",
     icon: <FaHeart className="text-3xl" />
   },
   {
     title: "Education",
-    description: "Provide good quality education to orphans and children from poor families",
+    description: "Provide good quality education to orphans and children from needy families",
     icon: <FaBookOpen className="text-3xl" />
   },
   {
     title: "Clothing",
-    description: "Provide clothing's to children and elders in poor families",
+    description: "Provide clothing's to children and elders in needy families",
     icon: <FaHome className="text-3xl" />
   }
 ];
@@ -164,9 +146,9 @@ export default function About() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white drop-shadow-2xl mb-6">
               About <span className="bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-400 bg-clip-text text-transparent animate-gradient">Hope Children</span>
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-white/95 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Bringing hope to the hopeless by changing lives through the Gospel of our Lord Jesus Christ
-            </p>
+              <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-white/95 max-w-4xl mx-auto mb-8 leading-relaxed">
+                Hope Children & Elderly Christian Foundation Uganda
+              </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="#our-story"
@@ -200,7 +182,9 @@ export default function About() {
             </div>
             <div className="prose prose-lg max-w-none text-dark-600 leading-relaxed space-y-6">
               <p className="text-xl mb-8">
-                <strong className="text-primary-600">Hope Children & Elderly Christian Foundation Uganda</strong> is a Christian founded organization which started with the purpose of bringing hope to the hopeless by changing their lives through preaching the Gospel of our Lord Jesus Christ, helping the orphans, children, elders and empowering women.
+                <strong className="text-primary-600">HOPE CHILDREN & ELDERLY CHRISTIAN FOUNDATION UGANDA</strong>
+                <br />
+                Hope Children & Elderly Christian Foundation is a Christian founded organization which started with the purpose of bringing hope to the hopeless by changing their lives through preaching the Gospel of our Lord Jesus Christ, helping the orphans, children, elders and empowering women.
               </p>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-2xl">
@@ -209,7 +193,7 @@ export default function About() {
                     How it started
                   </h3>
                   <p className="text-lg">
-                    The organization started in 2020 during the COVID-19 epidemic. During the lockdown which was caused by the pandemic, I used to see people on social media crying of hunger, children who were malnourished because they were penniless they couldn't afford to buy food. So when I saw this, I got touched, then I called my colleague in Uganda (Africa) we discussed on it and we come up with an idea of buying food and supply it to families which were in need.
+                    The organization started in 2020 during covid 19 epidemic. During the lockdown which was caused by the pandemic I used to see people on social media crying of hunger, children who were malnourished because they were penniless they couldn’t afford to buy food. So when I saw this, I got toughed, then I called my colleague in Uganda(Africa) we discussed on it and we come up with an idea of buying food and supply it  to families  which were in need. That’s how the organization started.
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-secondary-50 to-secondary-100 p-6 rounded-2xl">
@@ -218,15 +202,15 @@ export default function About() {
                     The turning point
                   </h3>
                   <p className="text-lg">
-                    During the process of supplying food we met an elderly woman (70+ years old). She narrated that she had lost a daughter due to a motor accident and left her with four younger children. The elder was 10 years old, and the youngest was 2½ years. They were sleeping in one bedroom rented house with no mattresses, food, and medicine and there was no hope of returning to school even if schools reopen.
+                    During the process of supplying food we met an elderly woman (70+) years old. She narrated that she had lost a daughter due to a motor accident and left her with four younger children. The elder was 10 years old, and   the youngest was 2 ½ years. They were sleeping in one bedroom rented house with no mattresses, food, and medicine and there was no hope of returning to school even if schools reopen.
                   </p>
                 </div>
               </div>
               <p className="text-xl mt-8">
-                As a woman I was so touched when I heard this and I decided to do all what I can so that I change and save these people's lives. I thank God that their lives changed and as per they are Glorifying the name of our Lord Jesus Christ.
+                As a woman I was so toughed when I had this and I decided to do all what I can so that I change and save these people’s lives. I thank God that their lives changed and as per they are Glorifying the name of our Lord Jesus Christ.
               </p>
               <p className="text-xl">
-                In 2022 we added on other two (2) children and for this case they have parents but the father of these two children is blind, no job and the mother cannot afford the tuition and take care of the family. When we started supporting this family, these children went back to school and one of them graduated from high school and another one is still in high school.
+                In 2022 we added on other two (2) _ children and for this case they have parents but the father of these two children is blind, no job and the mother cannot afford the tuition and take care of the family. When we stated supporting this family, these children went back to school and one of them graduated from high school and another one is still in high school.
               </p>
             </div>
           </div>
@@ -236,7 +220,7 @@ export default function About() {
       {/* Mission, Vision, Values */}
       <div className="max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-800 mb-6">Our Core Values</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-dark-800 mb-6">Purpose of the Foundation</h2>
           <p className="text-xl text-dark-600 max-w-3xl mx-auto">
             The foundation of everything we do is built on these three pillars
           </p>
@@ -248,7 +232,10 @@ export default function About() {
             </div>
             <h3 className="text-3xl font-bold text-dark-800 mb-6">Our Mission</h3>
             <p className="text-dark-600 leading-relaxed text-lg">
-              We preach the Gospel of our Lord Jesus Christ through support Crusades, supporting of churches and door to door. We provide good quality Health care for the children and elders who are in poor families and to orphans. We also provide good quality education to orphans and children from poor families. We provide clothing's to children and elders in poor families.
+              • We preach the Gospel of our Lord Jesus Christ through crusades, supporting churches, and door‑to‑door outreach.
+              <br />• We provide good quality healthcare for children and elders in needy families and to orphans.
+              <br />• We provide good quality education to orphans and children from needy families.
+              <br />• We provide clothing to children and elders in needy families.
             </p>
           </div>
           <div className="bg-white rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 animate-fade-in-up group" style={{animationDelay: '0.2s'}}>
@@ -266,7 +253,7 @@ export default function About() {
             </div>
             <h3 className="text-3xl font-bold text-dark-800 mb-6">Our Values</h3>
             <p className="text-dark-600 leading-relaxed text-lg">
-              We started all these with no resources, just because I was so touched when I saw these children and women suffering. Am a woman and I know that there is power in women when we support each other, and in our support we raise the younger generation's future. This inspires me.
+              We started all this with no resources, moved by the suffering of children and women. There is power in women when we support each other, and through our support we raise the next generation’s future. This inspires us.
             </p>
           </div>
         </div>
@@ -296,9 +283,9 @@ export default function About() {
       {/* Vision Goals Section */}
       <div className="max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-800 mb-6">Our Future Vision</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-800 mb-6">Our Vision</h2>
           <p className="text-xl text-dark-600 max-w-3xl mx-auto">
-            We have ambitious plans to expand our impact and reach even more communities in need.
+            In future we want Hope Children & Elderly Christian Foundation to be a role model in Africa.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

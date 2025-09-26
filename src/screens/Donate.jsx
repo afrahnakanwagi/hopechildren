@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-import { FaHeart, FaHandHoldingHeart, FaUsers, FaGraduationCap, FaHandsHelping, FaPhone, FaPlay, FaArrowRight, FaStar, FaPrayingHands, FaGlobe, FaShieldAlt, FaHandshake, FaSmile, FaBookOpen, FaHome, FaChurch, FaCross, FaEnvelope } from "react-icons/fa";
+import { 
+  FaHeart, FaHandHoldingHeart, FaUsers, FaGraduationCap, FaHandsHelping, 
+  FaPhone, FaArrowRight, FaGlobe, FaShieldAlt, FaHandshake, FaHome, 
+  FaChurch, FaCross, FaUniversity, FaGift, FaTruckMoving, FaLandmark, FaEnvelope 
+} from "react-icons/fa";
 
 const images = [
   "/assests/children1.png",
@@ -10,13 +14,6 @@ const images = [
   "/assests/child1.jpg",
   "/assests/child2.jpg",
   "/assests/child3.jpg",
-];
-
-const impactStats = [
-  { number: "500+", label: "Children Helped", icon: FaHeart, color: "text-primary-600", bgColor: "bg-gradient-to-br from-primary-50 to-primary-100" },
-  { number: "50+", label: "Elderly Supported", icon: FaHandHoldingHeart, color: "text-secondary-600", bgColor: "bg-gradient-to-br from-secondary-50 to-secondary-100" },
-  { number: "100+", label: "Women Empowered", icon: FaUsers, color: "text-success-600", bgColor: "bg-gradient-to-br from-success-50 to-success-100" },
-  { number: "4", label: "Years of Service", icon: FaStar, color: "text-accent-600", bgColor: "bg-gradient-to-br from-accent-50 to-accent-100" },
 ];
 
 const services = [
@@ -62,33 +59,6 @@ const services = [
   },
 ];
 
-const testimonials = [
-  {
-    name: "Sarah M.",
-    role: "Beneficiary",
-    text: "Hope Children gave my family a second chance. They provided education for my children and hope for our future. The love and support we received changed everything.",
-    rating: 5,
-    avatar: "SM",
-    story: "Single mother of 3",
-  },
-  {
-    name: "John K.",
-    role: "Community Leader",
-    text: "The impact this organization has had on our community is incredible. They truly live their mission and have transformed countless lives through their dedication.",
-    rating: 5,
-    avatar: "JK",
-    story: "Local church leader",
-  },
-  {
-    name: "Mary W.",
-    role: "Volunteer",
-    text: "Being part of this mission has changed my life. The love and dedication here is inspiring. Every day I see the difference we make in people's lives.",
-    rating: 5,
-    avatar: "MW",
-    story: "Volunteer for 2 years",
-  },
-];
-
 const values = [
   {
     title: "Faith-Based",
@@ -119,19 +89,15 @@ const values = [
 const donationAreas = [
   {
     title: "Education Support",
-    desc: "Help provide quality education to orphans and children from poor families",
+    desc: "Help provide quality education to orphans and children from needy families",
     icon: <FaGraduationCap className="text-4xl" />,
-    amount: "$50",
-    impact: "School fees for one child for 3 months",
     color: "from-primary-500 to-primary-600",
     bgColor: "bg-gradient-to-br from-primary-50 to-primary-100"
   },
   {
     title: "Healthcare Services",
-    desc: "Provide quality healthcare for children and elders in poor families",
+    desc: "Provide quality healthcare for children and elders in needy families",
     icon: <FaHeart className="text-4xl" />,
-    amount: "$40",
-    impact: "Medical care for one family for 2 months",
     color: "from-secondary-500 to-secondary-600",
     bgColor: "bg-gradient-to-br from-secondary-50 to-secondary-100"
   },
@@ -139,8 +105,6 @@ const donationAreas = [
     title: "Basic Needs",
     desc: "Provide clothing and basic necessities to vulnerable families",
     icon: <FaHome className="text-4xl" />,
-    amount: "$20",
-    impact: "Clothing and food for one family for 1 month",
     color: "from-success-500 to-success-600",
     bgColor: "bg-gradient-to-br from-success-50 to-success-100"
   },
@@ -148,57 +112,38 @@ const donationAreas = [
     title: "Gospel Outreach",
     desc: "Support crusades, church programs, and door-to-door evangelism",
     icon: <FaCross className="text-4xl" />,
-    amount: "$100",
-    impact: "Support for one community crusade or church program",
     color: "from-accent-500 to-accent-600",
     bgColor: "bg-gradient-to-br from-accent-50 to-accent-100"
   }
 ];
 
-const impactStories = [
-  {
-    name: "Joyce Katiiti",
-    role: "Founder & CEO",
-    story: "We started with nothing but faith during COVID-19. When I saw children suffering from hunger on social media, I knew I had to act. Today, we've transformed hundreds of lives through the Gospel and practical support.",
-    impact: "Founded the organization in 2020",
-    avatar: "JK"
-  },
-  {
-    name: "Grandmother's Story",
-    role: "Beneficiary Family",
-    story: "When we met the 70-year-old grandmother caring for her four orphaned grandchildren, they had no beds, no food, and no hope. Today, those children are back in school and thriving.",
-    impact: "Family of 5 supported since 2020",
-    avatar: "GS"
-  },
-  {
-    name: "Blind Father's Family",
-    role: "Beneficiary Family",
-    story: "We supported a family where the father is blind and cannot work. The mother couldn't afford school fees. Now, one child has graduated high school and another is still studying.",
-    impact: "2 children back in school",
-    avatar: "BF"
-  }
-];
-
 const contactInfo = [
   {
-    name: "Joyce Katiiti",
+    name: "Katiiti Joyce",
     role: "CEO",
-    phone: "+781 3302611",
-    email: "joyce@hopechildrenuganda.org"
+    phone: "+1 (781) 330-2611",
+    email: "katiitijoyce@gmail.com"
   },
   {
     name: "Nakimera Lilian",
-    role: "Head of Human Resources",
+    role: "H/R",
     phone: "+256 701 342803",
-    email: "lilian@hopechildrenuganda.org"
+    email: "liliannakimera64@gmail.com"
   },
   {
     name: "Edith Mbekeka",
     role: "Coordinator",
     phone: "+256 766613051",
-    email: "edith@hopechildrenuganda.org"
+    email: "hope@hopechristianfoundation.co.site"
   }
 ];
+
+const bankTransfer = {
+  bankName: "TD Bank",
+  routingNumber: "2113-705415",
+  accountNumber: "826567920",
+  accountName: "Katiiti Joyce"
+};
 
 export default function Donate() {
   const settings = {
@@ -226,41 +171,92 @@ export default function Donate() {
             Make a <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">Difference</span>
           </h1>
           <p className="text-xl md:text-2xl font-semibold max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            Your donation helps us bring hope to the hopeless through the Gospel of Jesus Christ and practical support.
+            Give in any form—funds, land, goods, services, equipment, or other resources. Nothing is too small.
           </p>
         </div>
       </div>
+      /* Ways to Give */
+<div className="relative z-20 -mt-20 pb-16">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="bg-white rounded-3xl shadow-large border border-primary-100 p-8 md:p-12">
+      <div className="text-center mb-8">
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full mb-4">
+          <FaHeart className="text-2xl text-white" />
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
+          Ways to Give
+        </h2>
+      </div>
 
-      {/* Impact Section */}
-      <div className="relative z-20 -mt-20 pb-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="bg-white rounded-3xl shadow-large border border-primary-100 p-8 md:p-12">
-            <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full mb-4">
-                <FaHeart className="text-2xl text-white" />
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">Your Impact</h2>
+      <div className="prose prose-lg max-w-none text-dark-600 leading-relaxed text-center">
+        <p className="text-xl mb-6">
+          You can donate by bank transfer, mobile money, or any other support
+          the Lord puts on your heart.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mt-8">
+          {/* Bank Transfer */}
+          <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-2xl border border-primary-200">
+            <div className="flex items-center gap-3 mb-4">
+              <FaUniversity className="text-primary-600 text-2xl" />
+              <h3 className="text-xl font-bold text-dark-800">
+                Bank Transfer Details
+              </h3>
             </div>
-            <div className="prose prose-lg max-w-none text-dark-600 leading-relaxed text-center">
-              <p className="text-xl mb-6">
-                Since 2020, we have transformed the lives of hundreds of children, elderly, and families in Uganda. 
-                Your donation directly supports our mission to bring hope to the hopeless through the Gospel of Jesus Christ.
-              </p>
-              <p className="text-lg">
-                We started with no resources, just faith and compassion. Today, we provide education, healthcare, clothing, 
-                and spiritual support to vulnerable communities across Uganda.
-              </p>
+            <ul className="space-y-2 text-dark-700">
+              <li>
+                <span className="font-semibold">Bank name:</span>{" "}
+                {bankTransfer.bankName}
+              </li>
+              <li>
+                <span className="font-semibold">Routing number:</span>{" "}
+                {bankTransfer.routingNumber}
+              </li>
+              <li>
+                <span className="font-semibold">Account number:</span>{" "}
+                {bankTransfer.accountNumber}
+              </li>
+              <li>
+                <span className="font-semibold">Account name:</span>{" "}
+                {bankTransfer.accountName}
+              </li>
+            </ul>
+          </div>
+
+          {/* Mobile Money */}
+          <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl border border-green-200">
+            <div className="flex items-center gap-3 mb-4">
+              <FaPhone className="text-green-600 text-2xl" />
+              <h3 className="text-xl font-bold text-dark-800">
+                Mobile Money Donations
+              </h3>
             </div>
+            <ul className="space-y-2 text-dark-700">
+              <li>
+                <span className="font-semibold">Receiver Name:</span> Nakimera
+                Lilian
+              </li>
+              <li>
+                <span className="font-semibold">MTN/Airtel Number:</span>{" "}
+                0779150560
+              </li>
+              <li className="text-sm text-dark-600">
+                Send directly via Mobile Money and confirm with our team.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
       {/* Donation Areas */}
       <div className="max-w-6xl mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-dark-800 mb-4">How Your Donation Helps</h2>
           <p className="text-xl text-dark-600 max-w-3xl mx-auto">
-            Every dollar makes a real difference in the lives of vulnerable children and families in Uganda.
+            Your generosity, in any form and amount, supports these key areas.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -274,44 +270,10 @@ export default function Donate() {
                 {area.icon}
               </div>
               <h3 className="text-2xl font-bold text-dark-800 mb-4">{area.title}</h3>
-              <p className="text-dark-600 mb-6 leading-relaxed">{area.desc}</p>
-              <div className="text-3xl font-bold text-primary-600 mb-2">{area.amount}</div>
-              <div className="text-sm text-dark-500">{area.impact}</div>
+              <p className="text-dark-600 mb-2 leading-relaxed">{area.desc}</p>
+              <div className="text-sm text-dark-500">Give any amount or in-kind support</div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Impact Stories */}
-      <div className="bg-gradient-to-r from-primary-600 to-secondary-600 py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Stories of Transformation</h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Real stories showing the impact of your support in the lives of vulnerable families.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {impactStories.map((story, index) => (
-              <div 
-                key={story.name}
-                className="bg-white/10 backdrop-blur-2xl rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up"
-                style={{animationDelay: `${index * 0.2}s`}}
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                    {story.avatar}
-                  </div>
-                  <div>
-                    <div className="font-bold text-white text-xl">{story.name}</div>
-                    <div className="text-white/70 text-lg">{story.role}</div>
-                  </div>
-                </div>
-                <p className="text-white/95 mb-6 leading-relaxed italic">"{story.story}"</p>
-                <div className="text-white/70 text-sm">{story.impact}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
@@ -357,12 +319,12 @@ export default function Donate() {
             Join Us in Making a Difference
           </h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Every donation, prayer, and partnership helps us bring hope to more families in Uganda. 
+            Every donation, prayer, and partnership helps us bring hope to more families in the world. 
             Together, we can transform lives through the love of Christ.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:joyce@hopechildrenuganda.org"
+              href="mailto:hope@hopechristianfoundation.co.site"
               className="bg-white text-primary-600 py-4 px-8 rounded-2xl text-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-large hover:shadow-2xl transform hover:scale-105"
             >
               Contact Us
