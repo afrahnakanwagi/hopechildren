@@ -36,7 +36,7 @@ const contactInfo = [
   {
     icon: <FaPhone />,
     title: "Phone",
-    details: ["+1 (781) 330‑2611", "+256 701 342803"],
+    details: ["+1781 330‑2611", "+256 701 342803"],
     description: "Call us for immediate assistance"
   },
   {
@@ -133,6 +133,7 @@ export default function Contact() {
           <p className="text-xl md:text-2xl font-semibold max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             Connect with us to learn more about our mission and how you can help make a difference.
           </p>
+          <br /><br />
         </div>
       </div>
 

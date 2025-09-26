@@ -67,15 +67,18 @@ const services = [
   {
     title: "Healthcare",
     description: "Provide good quality Health care for the children and elders who are in needy families and to orphans",
+    description: "Provide good quality Health care for the children and elders who are in needy families and to orphans",
     icon: <FaHeart className="text-3xl" />
   },
   {
     title: "Education",
     description: "Provide good quality education to orphans and children from needy families",
+    description: "Provide good quality education to orphans and children from needy families",
     icon: <FaBookOpen className="text-3xl" />
   },
   {
     title: "Clothing",
+    description: "Provide clothing's to children and elders in needy families",
     description: "Provide clothing's to children and elders in needy families",
     icon: <FaHome className="text-3xl" />
   }

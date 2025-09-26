@@ -19,9 +19,11 @@ const Footer = () => {
           {/* Brand & Mission */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center">
-                <FaHeart className="text-xl text-white" />
-              </div>
+              <img
+                src="/assests/logo3.png"
+                alt="Hope Christian Foundation logo"
+                className="h-12 md:h-14 w-auto object-contain shrink-0"
+              />
               <div>
                 <h3 className="text-xl font-bold tracking-tight">
                   Hope Children &amp; Elderly
@@ -62,7 +64,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.instagram.com/hope_christianfoundation20_/" 
+                href="https://www.instagram.com/hope_christianfoundation20_/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gradient-to-br from-accent-500 to-accent-600 rounded-lg flex items-center justify-center hover:from-accent-600 hover:to-accent-700 transition-all duration-300 transform hover:scale-110"
@@ -98,7 +100,7 @@ const Footer = () => {
                     Joyce Katiti (Founder)
                   </p>
                   <p className="text-sm text-gray-300">
-                    +1 (781) 330-2611
+                    +1781 330-2611
                   </p>
                 </div>
               </div>
