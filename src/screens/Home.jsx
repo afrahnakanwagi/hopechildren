@@ -463,7 +463,7 @@ export default function Home() {
             Join Us in Making a <span className="bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">Difference</span>
           </h2>
           <p className="text-2xl text-white/90 mb-16 leading-relaxed max-w-5xl mx-auto">
-            Every donation, prayer, and partnership helps us bring hope to more families in Uganda. 
+            Every donation, prayer, and partnership helps us bring hope to more families in the world. 
             Together, we can transform lives through the love of Christ and create lasting change in our communities.
           </p>
           

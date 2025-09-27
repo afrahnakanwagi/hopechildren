@@ -193,7 +193,7 @@ export default function Services() {
             </div>
             <div className="prose prose-lg max-w-none text-dark-600 leading-relaxed text-center">
               <p className="text-xl mb-6">
-                To share the love of Jesus Christ through comprehensive outreach programs that address the physical, spiritual, and emotional needs of Uganda's most vulnerable communities.
+                To share the love of Jesus Christ through comprehensive outreach programs that address the physical, spiritual, and emotional needs of the world's most vulnerable communities.
               </p>
               <p className="text-lg">
                 We believe in a holistic approach to ministry, combining Gospel outreach with practical humanitarian aid to create lasting transformation in the lives of orphans, vulnerable children, the elderly, and women in need.
