@@ -9,9 +9,6 @@ const currentProjects = [
     title: "Education Sponsorship Program",
     status: "Active",
     description: "Providing school fees, uniforms, books, and supplies for children who cannot afford education.",
-    impact: "500+ children currently supported",
-    progress: 85,
-    color: "from-primary-500 to-primary-600",
     details: [
       "School fees for primary and secondary education",
       "Educational supplies and textbooks",
@@ -25,9 +22,6 @@ const currentProjects = [
     title: "Emergency Housing Initiative",
     status: "Active",
     description: "Building and repairing homes for families living in unsafe or inadequate housing conditions.",
-    impact: "25 homes built/repaired",
-    progress: 60,
-    color: "from-secondary-500 to-secondary-600",
     details: [
       "Safe and durable housing construction",
       "Home repairs and improvements",
@@ -41,9 +35,6 @@ const currentProjects = [
     title: "Healthcare Access Program",
     status: "Active",
     description: "Providing medical care, health screenings, and medication for vulnerable individuals.",
-    impact: "200+ people treated annually",
-    progress: 75,
-    color: "from-success-500 to-success-600",
     details: [
       "Medical clinics and health screenings",
       "Medication and treatment support",
@@ -60,9 +51,6 @@ const futureProjects = [
     title: "Vocational Training Centers",
     status: "Planning",
     description: "Establish centers that empower women with practical skills, enabling them to build sustainable livelihoods.",
-    timeline: "2025-2026",
-    budget: "$33,000",
-    color: "from-accent-500 to-accent-600",
     details: [
       "Skills training in tailoring, cooking, and crafts",
       "Business development and entrepreneurship",
@@ -83,9 +71,6 @@ const futureProjects = [
     title: "Rehabilitation Center for Girls",
     status: "Planning",
     description: "Building a safe haven for girls who have experienced abuse, providing shelter, education, and emotional support.",
-    timeline: "2026-2027",
-    budget: "$50,000",
-    color: "from-warning-500 to-warning-600",
     details: [
       "Safe and secure residential facilities",
       "Trauma-informed counseling services",
@@ -106,9 +91,6 @@ const futureProjects = [
     title: "Addiction Treatment Center",
     status: "Planning",
     description: "Launch a center dedicated to helping youth affected by drugs and alcohol, offering counseling and spiritual guidance.",
-    timeline: "2027-2028",
-    budget: "$40,000",
-    color: "from-purple-500 to-purple-600",
     details: [
       "Medical detoxification and treatment",
       "Individual and group counseling",
@@ -129,9 +111,6 @@ const futureProjects = [
     title: "Gospel Outreach Expansion",
     status: "Planning",
     description: "Expanding our reach to share the Gospel and support more communities through crusades and evangelism.",
-    timeline: "2025-2028",
-    budget: "$20,000",
-    color: "from-primary-500 to-accent-500",
     details: [
       "Community crusades and revival meetings",
       "Church planting and support initiatives",
@@ -147,13 +126,6 @@ const futureProjects = [
       "Hope and purpose restoration"
     ]
   }
-];
-
-const projectStats = [
-  { number: "3", label: "Active Projects", icon: <FaHandsHelping /> },
-  { number: "4", label: "Future Projects", icon: <FaGlobe /> },
-  { number: "$143k", label: "Total Budget Needed", icon: <FaDollarSign /> },
-  { number: "4", label: "Years Timeline", icon: <FaCalendarAlt /> }
 ];
 
 // Card slider settings
@@ -172,15 +144,11 @@ const cardSettings = {
   responsive: [
     {
       breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-      },
+      settings: { slidesToShow: 2 },
     },
     {
       breakpoint: 640,
-      settings: {
-        slidesToShow: 1,
-      },
+      settings: { slidesToShow: 1 },
     },
   ],
   appendDots: dots => (
@@ -239,54 +207,6 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Project Statistics */}
-      <div className="relative z-20 -mt-20 pb-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="bg-white rounded-3xl shadow-large border border-primary-100 p-8 md:p-12">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full mb-4">
-                <FaGlobe className="text-2xl text-white" />
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">Project Overview</h2>
-              <p className="text-xl text-dark-600 max-w-3xl mx-auto">
-                Our comprehensive project portfolio addresses the most pressing needs in Uganda's vulnerable communities.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center animate-fade-in-up">
-                <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="text-2xl text-white"><FaHandsHelping /></div>
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-dark-800 mb-2">3</div>
-                <div className="text-dark-600 font-medium">Active Projects</div>
-              </div>
-              <div className="text-center animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-                <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="text-2xl text-white"><FaGlobe /></div>
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-dark-800 mb-2">4</div>
-                <div className="text-dark-600 font-medium">Future Projects</div>
-              </div>
-              <div className="text-center animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="text-2xl text-white"><FaDollarSign /></div>
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-dark-800 mb-2">$215M</div>
-                <div className="text-dark-600 font-medium">Total Budget Needed</div>
-              </div>
-              <div className="text-center animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-                <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="text-2xl text-white"><FaCalendarAlt /></div>
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-dark-800 mb-2">4</div>
-                <div className="text-dark-600 font-medium">Years Timeline</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Active Projects Slider */}
       <div className="py-12">
         <h2 className="text-3xl font-bold text-dark-800 mb-6 text-center">Active Projects</h2>
@@ -294,21 +214,13 @@ export default function Projects() {
           {currentProjects.map((project, idx) => (
             <div key={project.title} style={{height: '100%'}}>
               <div className="modern-card bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl group border border-primary-100"
-                style={{
-                  animationDelay: `${idx * 0.1}s`,
-                  height: '100%',
-                  margin: '0 12px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
-              >
+                style={{animationDelay: `${idx * 0.1}s`, height: '100%', margin: '0 12px', display: 'flex', flexDirection: 'column'}}>
                 <div className="flex flex-col flex-1 w-full">
                   <div className="mb-6 p-4 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full shadow-soft flex items-center justify-center" style={{width: 80, height: 80}}>
                     {project.icon}
                   </div>
                   <h3 className="text-2xl font-bold text-dark-800 mb-3 group-hover:text-primary-600 transition-colors duration-300">{project.title}</h3>
                   <p className="text-dark-600 mb-4 leading-relaxed text-base" style={{minHeight: 60}}>{project.description}</p>
-                  <div className="text-primary-600 font-semibold mb-2">{project.impact}</div>
                   <div className="w-full flex-1 flex flex-col justify-end">
                     <div className="flex flex-wrap gap-2 justify-center mb-4">
                       {project.details.map((detail, i) => (
@@ -342,8 +254,6 @@ export default function Projects() {
                 </div>
                 <h3 className="text-2xl font-bold text-dark-800 mb-3 group-hover:text-primary-600 transition-colors duration-300">{project.title}</h3>
                 <p className="text-dark-600 mb-4 leading-relaxed text-base" style={{minHeight: 60}}>{project.description}</p>
-                <div className="text-primary-600 font-semibold mb-2">Timeline: {project.timeline}</div>
-                <div className="text-primary-600 font-semibold mb-2">Budget: {project.budget}</div>
                 <div className="w-full flex-1 flex flex-col justify-end">
                   <div className="flex flex-wrap gap-2 justify-center mb-4">
                     {project.details.map((detail, i) => (
@@ -410,4 +320,4 @@ export default function Projects() {
     opacity: 1;
     color: #f59e42;
   }
-`}</style> 
+`}</style>
