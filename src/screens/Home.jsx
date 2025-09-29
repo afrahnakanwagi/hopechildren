@@ -12,10 +12,10 @@ const images = [
 ];
 
 const impactStats = [
-  { number: "500+", label: "Children Helped", icon: FaHeart, color: "text-primary-600", bgColor: "bg-gradient-to-br from-primary-50 to-primary-100" },
-  { number: "50+", label: "Elderly Supported", icon: FaHandHoldingHeart, color: "text-secondary-600", bgColor: "bg-gradient-to-br from-secondary-50 to-secondary-100" },
-  { number: "100+", label: "Women Empowered", icon: FaUsers, color: "text-success-600", bgColor: "bg-gradient-to-br from-success-50 to-success-100" },
-  { number: "4", label: "Years of Service", icon: FaStar, color: "text-accent-600", bgColor: "bg-gradient-to-br from-accent-50 to-accent-100" },
+  { number: "Care & Support", label: "Children receiving care", icon: FaHeart, color: "text-primary-600", bgColor: "bg-gradient-to-br from-primary-50 to-primary-100" },
+  { number: "Dignity & Care", label: "Elderly supported with dignity", icon: FaHandHoldingHeart, color: "text-secondary-600", bgColor: "bg-gradient-to-br from-secondary-50 to-secondary-100" },
+  { number: "Skills & Hope", label: "Women empowered through training", icon: FaUsers, color: "text-success-600", bgColor: "bg-gradient-to-br from-success-50 to-success-100" },
+  { number: "Since 2020", label: "Faithful service", icon: FaStar, color: "text-accent-600", bgColor: "bg-gradient-to-br from-accent-50 to-accent-100" },
 ];
 
 const services = [
@@ -212,7 +212,7 @@ export default function Home() {
                   {/* Enhanced Badge */}
                   <div className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-xl text-white px-8 py-4 rounded-full mb-12 border border-white/30 shadow-2xl animate-fade-in-down">
                     <FaPrayingHands className="text-primary-300 animate-pulse" />
-                    <span className="font-semibold text-lg">Serving Uganda Since 2020</span>
+                    <span className="font-semibold text-lg">Serving the world since 2020</span>
                     <div className="w-2 h-2 bg-primary-300 rounded-full animate-ping"></div>
                   </div>
                   
@@ -230,7 +230,7 @@ export default function Home() {
                   
                   {/* Enhanced Subtitle */}
                   <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-3xl md:max-w-5xl mx-auto mb-8 md:mb-16 text-white/95 drop-shadow-xl leading-relaxed font-light">
-                    We serve orphans, vulnerable children, the elderly, and women in need across Uganda, 
+                    We serve orphans, vulnerable children, the elderly, and women in need across the world, 
                     <span className="text-primary-200 font-semibold"> rooted in the Gospel of our Lord Jesus Christ.</span>
                   </p>
                   
@@ -290,7 +290,7 @@ export default function Home() {
                   Our <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">Impact</span>
                 </h2>
                 <p className="text-xl text-dark-600 max-w-3xl mx-auto leading-relaxed">
-                  Transforming lives through faith, love, and dedicated service across Uganda
+                  Transforming lives through faith, love, and dedicated service across the world
                 </p>
               </div>
               
@@ -328,7 +328,7 @@ export default function Home() {
             </h2>
             <p className="text-2xl text-dark-600 max-w-4xl mx-auto leading-relaxed">
               Our comprehensive approach addresses the physical, spiritual, and emotional needs 
-              of Uganda's most vulnerable communities through dedicated programs and services.
+              of the world's most vulnerable communities through dedicated programs and services.
             </p>
           </div>
           
@@ -463,7 +463,7 @@ export default function Home() {
             Join Us in Making a <span className="bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">Difference</span>
           </h2>
           <p className="text-2xl text-white/90 mb-16 leading-relaxed max-w-5xl mx-auto">
-            Every donation, prayer, and partnership helps us bring hope to more families in Uganda. 
+            Every donation, prayer, and partnership helps us bring hope to more families in the world. 
             Together, we can transform lives through the love of Christ and create lasting change in our communities.
           </p>
           

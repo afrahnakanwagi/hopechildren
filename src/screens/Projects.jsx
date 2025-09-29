@@ -234,7 +234,7 @@ export default function Projects() {
             Our <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">Projects</span>
           </h1>
           <p className="text-xl md:text-2xl font-semibold max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            Building a brighter future for Uganda, one project at a time through sustainable development and community transformation.
+            Building a brighter future for the world, one project at a time through sustainable development and community transformation.
           </p>
         </div>
       </div>
