@@ -16,7 +16,7 @@ const bankTransfer = {
   bankName: "TD Bank",
   routingNumber: "2113-70545",
   accountNumber: "8265167920",
-  accountName: "Katiiti Joyce",
+  accountName: "Hope christian foundation",
 };
 
 export default function Donate() {
