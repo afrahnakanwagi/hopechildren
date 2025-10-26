@@ -1,6 +1,16 @@
 import React from "react";
-import { FaUniversity, FaPhoneAlt, FaHeart } from "react-icons/fa";
+import { motion } from "framer-motion";
+import {
+  FaUniversity,
+  FaPhoneAlt,
+  FaHeart,
+  FaHandshake,
+  FaGift,
+  FaHome,
+  FaGraduationCap,
+} from "react-icons/fa";
 import { SiZelle, SiVenmo, SiPaypal, SiCashapp } from "react-icons/si";
+import { Link } from "react-router-dom"; // ✅ Added Link import
 
 const Donate = () => {
   const paymentMethods = [
@@ -32,7 +42,13 @@ const Donate = () => {
     name: "TD Bank",
     routing: "2113-70545",
     account: "8265167920",
-    accountName: "Hope christian foundation",
+    accountName: "Hope Christian Foundation",
+  };
+
+  // Framer Motion variants for scroll animation
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
 
   return (
@@ -66,7 +82,14 @@ const Donate = () => {
         ></div>
       ))}
 
-      <div className="relative z-10 bg-white/95 shadow-2xl rounded-3xl p-8 w-full max-w-3xl text-center border border-white/30 backdrop-blur-sm">
+      {/* Donation Card */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+        className="relative z-10 bg-white/95 shadow-2xl rounded-3xl p-8 w-full max-w-3xl text-center border border-white/30 backdrop-blur-sm"
+      >
         <h1 className="text-3xl font-extrabold mb-6 text-primary-600 flex items-center justify-center gap-2">
           <FaHeart className="text-accent-600 animate-pulse" /> Tithes & Offering
         </h1>
@@ -78,14 +101,16 @@ const Donate = () => {
 
         <div className="grid md:grid-cols-3 gap-6">
           {paymentMethods.map((method, index) => (
-            <div
+            <motion.div
               key={index}
-              className={`rounded-2xl p-6 border border-white/30 hover:shadow-2xl hover:bg-white/40 transition-all duration-500 transform hover:-translate-y-2 ${
+              variants={fadeInUp}
+              whileHover={{ scale: 1.03 }}
+              className={`rounded-2xl p-6 border border-white/30 hover:shadow-2xl hover:bg-white/40 transition-all duration-500 ${
                 index === 0
-                  ? "bg-blue-100" // Zelle / Venmo
+                  ? "bg-blue-100"
                   : index === 1
-                  ? "bg-purple-100" // CashApp
-                  : "bg-orange-100" // PayPal
+                  ? "bg-purple-100"
+                  : "bg-orange-100"
               }`}
             >
               <div className="flex items-center justify-center gap-3 mb-3">
@@ -107,12 +132,15 @@ const Donate = () => {
               >
                 Open {method.name}
               </a>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Bank Transfer Section */}
-        <div className="bg-green-100 rounded-2xl p-6 border border-white/30 mt-8 text-left hover:shadow-2xl transition-all duration-500">
+        <motion.div
+          variants={fadeInUp}
+          className="bg-green-100 rounded-2xl p-6 border border-white/30 mt-8 text-left hover:shadow-2xl transition-all duration-500"
+        >
           <h3 className="text-xl font-semibold text-primary-600 mb-3 flex items-center gap-2">
             <FaUniversity /> Bank Transfer Details
           </h3>
@@ -130,28 +158,146 @@ const Donate = () => {
               <strong>Account Name:</strong> {bankDetails.accountName}
             </li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* Contact Section */}
-        <div className="bg-yellow-100 rounded-2xl p-6 border border-white/30 mt-8 flex flex-col items-center hover:shadow-xl transition-all duration-500">
+        <motion.div
+          variants={fadeInUp}
+          className="bg-yellow-100 rounded-2xl p-6 border border-white/30 mt-8 flex flex-col items-center hover:shadow-xl transition-all duration-500"
+        >
           <FaPhoneAlt className="text-primary-600 text-2xl mb-2 animate-pulse" />
-          <p className="font-semibold text-dark-700">For any questions or checks:</p>
+          <p className="font-semibold text-dark-700">
+            For any questions or checks:
+          </p>
           <p className="text-lg font-bold text-dark-800 mt-1">+1 508 810 7993</p>
-        </div>
+        </motion.div>
 
         {/* Bible Verse Section */}
-        <div className="bg-pink-50/50 backdrop-blur-sm rounded-2xl p-6 mt-8 max-w-xl mx-auto">
+        <motion.div
+          variants={fadeInUp}
+          className="bg-pink-50/50 backdrop-blur-sm rounded-2xl p-6 mt-8 max-w-xl mx-auto"
+        >
           <p className="text-dark-700 text-center font-medium italic">
-            "For I was hungry and you gave me food, I was thirsty and you gave me drink, 
-            I was a stranger and you welcomed me." - Matthew 25:35
+            "For I was hungry and you gave me food, I was thirsty and you gave
+            me drink, I was a stranger and you welcomed me." - Matthew 25:35
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      {/* Extra CSS for Floating Animation */}
+      {/* ✅ Animated "Ways You Can Help" Section */}
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+        className="relative z-10 mt-20 w-full max-w-6xl text-center"
+      >
+        <h2 className="text-3xl font-bold mb-10 text-dark-800">
+          Ways You Can Help
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              icon: <FaHeart className="text-orange-500 text-4xl mb-4 mx-auto" />,
+              title: "Make a Donation",
+              desc: "Contribute to our programs and help us reach more children with food, shelter, and education.",
+              color: "orange",
+            },
+            {
+              icon: <FaHandshake className="text-blue-500 text-4xl mb-4 mx-auto" />,
+              title: "Sponsor a Child",
+              desc: "Partner with us to support a child’s education, health, and spiritual growth.",
+              color: "blue",
+            },
+            {
+              icon: <FaHandshake className="text-green-500 text-4xl mb-4 mx-auto" />,
+              title: "Partner With Us",
+              desc: "Join hands with us as a church, organization, or individual to expand our reach.",
+              color: "green",
+            },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              variants={fadeInUp}
+              whileHover={{ scale: 1.05 }}
+              className={`bg-${item.color}-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition`}
+            >
+              {item.icon}
+              <h3 className="font-bold text-xl mb-2">{item.title}</h3>
+              <p className="text-dark-700 mb-4">{item.desc}</p>
+              {/* ✅ Changed Learn More links to Contact page */}
+              <Link
+                to="/contact"
+                className={`text-${item.color}-600 font-semibold hover:underline`}
+              >
+                Learn More →
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* ✅ Animated "Your Support Makes This Possible" Section */}
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+        className="relative z-10 mt-20 w-full max-w-6xl text-center"
+      >
+        <h2 className="text-3xl font-bold mb-10 text-dark-800">
+          Your Support Makes This Possible
+        </h2>
+        <div className="grid md:grid-cols-4 gap-8">
+          {[
+            {
+              icon: (
+                <FaGraduationCap className="text-orange-500 text-4xl mb-4 mx-auto" />
+              ),
+              title: "Education",
+              desc: "Providing quality education and school supplies.",
+              color: "orange",
+            },
+            {
+              icon: <FaHome className="text-blue-500 text-4xl mb-4 mx-auto" />,
+              title: "Shelter",
+              desc: "Safe housing for vulnerable children and families.",
+              color: "blue",
+            },
+            {
+              icon: <FaGift className="text-green-500 text-4xl mb-4 mx-auto" />,
+              title: "Food Support",
+              desc: "Nutritious meals for children and families in need.",
+              color: "green",
+            },
+            {
+              icon: (
+                <FaHandshake className="text-yellow-500 text-4xl mb-4 mx-auto" />
+              ),
+              title: "Community",
+              desc: "Building strong, supportive, faith-based communities.",
+              color: "yellow",
+            },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              variants={fadeInUp}
+              whileHover={{ scale: 1.05 }}
+              className={`bg-${item.color}-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition`}
+            >
+              {item.icon}
+              <h3 className="font-bold text-xl mb-2">{item.title}</h3>
+              <p className="text-dark-700">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Floating Animation CSS */}
       <style jsx>{`
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px);
           }
           50% {

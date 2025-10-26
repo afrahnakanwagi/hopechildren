@@ -6,7 +6,7 @@ const team = [
   {
     name: "Joyce Katiiti",
     role: "Founder & CEO",
-    phone: "+1 (781) 330‑2611",
+    phone: "+15088107993",
     email: "katiitijoyce@gmail.com",
     avatar: "👩🏾‍💼",
     description: "Founded the organization with a vision to bring hope to the world's most vulnerable communities. Leads strategic initiatives and oversees all operations.",
@@ -24,7 +24,6 @@ const team = [
   {
     name: "Edith Mbekeka",
     role: "Programs Coordinator",
-    phone: "+256 766 613051",
     email: "hope@hopechristianfoundation.co.site",
     avatar: "👩🏾‍💼",
     description: "Coordinates our educational and empowerment initiatives, ensuring effective program delivery and impact measurement.",
