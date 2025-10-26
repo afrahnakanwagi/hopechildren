@@ -3,7 +3,7 @@
 const blogPosts = [
   {
     title: "Transforming Lives: Our Journey So Far",
-    excerpt: "Discover how Hope Children has impacted hundreds of lives in Uganda through faith, compassion, and action.",
+    excerpt: "Discover how Hope christian foundation has impacted hundreds of lives in Uganda through faith, compassion, and action.",
     image: "/assests/child.jpg",
     date: "2024-05-01",
     link: "#"
@@ -37,7 +37,7 @@ export default function Blog() {
       {/* Page Title */}
       <div className="w-full max-w-4xl mx-auto text-center pt-12 mb-8">
         <h1 className="text-5xl font-extrabold text-primary mb-4 tracking-tight">Our Blog</h1>
-        <p className="text-lg text-gray-700 mb-2">Stories, updates, and inspiration from Hope Children Foundation.</p>
+        <p className="text-lg text-gray-700 mb-2">Stories, updates, and inspiration from Hope christian foundation.</p>
         <div className="w-24 h-1 mx-auto bg-gradient-to-r from-primary-400 via-secondary-400 to-primary-400 rounded-full"></div>
       </div>
       {/* Featured Blog Section */}
