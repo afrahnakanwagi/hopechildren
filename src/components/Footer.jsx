@@ -26,10 +26,10 @@ const Footer = () => {
               />
               <div>
                 <h3 className="text-xl font-bold tracking-tight">
-                  Hope Children &amp; Elderly
+                Hope  christian
                 </h3>
                 <p className="text-sm text-primary-300">
-                  Christian Foundation Uganda
+                  Foundation 
                 </p>
               </div>
             </div>
@@ -74,7 +74,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://wa.me/15088107993"
+                href="https://wa.me/+15088107993"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gradient-to-br from-success-500 to-success-600 rounded-lg flex items-center justify-center hover:from-success-600 hover:to-success-700 transition-all duration-300 transform hover:scale-110"
@@ -100,7 +100,7 @@ const Footer = () => {
                     Joyce Katiti (Founder)
                   </p>
                   <p className="text-sm text-gray-300">
-                    +1781 330-2611
+                  +15088107993
                   </p>
                 </div>
               </div>
@@ -251,7 +251,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-sm text-gray-400">
-                © 2025 Hope Children &amp; Elderly Christian Foundation Uganda.
+                © 2025 Hope christian Foundation .
                 All rights reserved.
               </p>
             </div>

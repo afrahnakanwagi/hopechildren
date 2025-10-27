@@ -1,246 +1,274 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { SiZelle, SiVenmo, SiPaypal, SiCashapp } from "react-icons/si";
+import { FaHeart, FaHandshake, FaGraduationCap, FaHome, FaGift } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import {
-  FaHeart,
-  FaHandHoldingHeart,
-  FaUsers,
-  FaGraduationCap,
-  FaHandsHelping,
-  FaPhone,
-  FaArrowRight,
-  FaUniversity,
-  FaGift,
-  FaHome,
-} from "react-icons/fa";
 
-const bankTransfer = {
-  bankName: "TD Bank",
-  routingNumber: "2113-70545",
-  accountNumber: "8265167920",
-  accountName: "Hope christian foundation",
-};
+const Donate = () => {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
 
-export default function Donate() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="relative bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20">
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="relative max-w-7xl mx-auto text-center px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Support Our Mission
-          </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
-            Every contribution makes a difference in the lives of children and
-            families we serve. Join us in bringing hope and transformation to
-            communities.
-          </p>
-        </div>
-      </div>
+    <div
+      className="relative min-h-screen w-full flex flex-col items-center justify-center p-6 overflow-hidden"
+      style={{
+        background: "linear-gradient(135deg, #F1E6FF 0%, #E8F1FF 100%)",
+        color: "#1E293B",
+      }}
+    >
+      {/* Floating Background Elements */}
+      <div className="absolute top-20 left-10 w-32 h-32 bg-[#A855F7]/20 rounded-full blur-3xl animate-pulse"></div>
+      <div
+        className="absolute bottom-40 right-20 w-48 h-48 bg-[#3B82F6]/20 rounded-full blur-3xl animate-pulse"
+        style={{ animationDelay: "1s" }}
+      ></div>
+      <div
+        className="absolute top-1/2 left-1/4 w-16 h-16 bg-[#2563EB]/15 rounded-full blur-xl animate-pulse"
+        style={{ animationDelay: "2s" }}
+      ></div>
+      <div
+        className="absolute bottom-1/3 right-1/4 w-20 h-20 bg-[#16A34A]/15 rounded-2xl blur-2xl animate-pulse"
+        style={{ animationDelay: "0.5s" }}
+      ></div>
 
-      {/* Ways to Give */}
-      <div className="relative z-20 -mt-20 pb-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="bg-white rounded-3xl shadow-large border border-primary-100 p-8 md:p-12">
-            <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full mb-4">
-                <FaHeart className="text-2xl text-white" />
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
-                Ways to Give
-              </h2>
+      {/* Floating Particles */}
+      {[...Array(15)].map((_, i) => (
+        <div
+          key={i}
+          className="absolute w-2 h-2 rounded-full animate-float"
+          style={{
+            backgroundColor: `rgba(59, 130, 246, 0.3)`,
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 3}s`,
+            animationDuration: `${3 + Math.random() * 2}s`,
+          }}
+        ></div>
+      ))}
+
+      {/* Main Content */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+        className="relative z-10 w-full max-w-5xl"
+      >
+        {/* Header Section with Icons */}
+        <div className="mb-12">
+          <div className="flex items-center justify-start gap-6 md:gap-8 mb-8 flex-wrap lg:flex-nowrap">
+            <div className="flex items-center gap-4 md:gap-6">
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              >
+                <SiVenmo className="text-[#3B82F6] text-5xl md:text-7xl" />
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                <SiZelle className="text-[#3B82F6] text-5xl md:text-7xl" />
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <SiPaypal className="text-[#F97316] text-5xl md:text-7xl" />
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <SiCashapp className="text-[#16A34A] text-5xl md:text-7xl" />
+              </motion.div>
             </div>
+            <motion.h1
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+              className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tight leading-tight flex-1"
+              style={{ textShadow: "4px 4px 8px rgba(0,0,0,0.2)" }}
+            >
+              TITHES & OFFERING
+            </motion.h1>
+          </div>
 
-            <div className="prose prose-lg max-w-none text-dark-600 leading-relaxed text-center">
-              <p className="text-xl mb-6">
-                You can donate by bank transfer, mobile money, or any other
-                support the Lord puts on your heart.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mt-8">
-                {/* Bank Transfer */}
-                <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-2xl border border-primary-200">
-                  <div className="flex items-center gap-3 mb-4">
-                    <FaUniversity className="text-primary-600 text-2xl" />
-                    <h3 className="text-xl font-bold text-dark-800">
-                      Bank Transfer Details
-                    </h3>
-                  </div>
-                  <ul className="space-y-2 text-dark-700">
-                    <li>
-                      <span className="font-semibold">Bank name:</span>{" "}
-                      {bankTransfer.bankName}
-                    </li>
-                    <li>
-                      <span className="font-semibold">Routing number:</span>{" "}
-                      {bankTransfer.routingNumber}
-                    </li>
-                    <li>
-                      <span className="font-semibold">Account number:</span>{" "}
-                      {bankTransfer.accountNumber}
-                    </li>
-                    <li>
-                      <span className="font-semibold">Account name:</span>{" "}
-                      {bankTransfer.accountName}
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Mobile Money */}
-                <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl border border-green-200">
-                  <div className="flex items-center gap-3 mb-4">
-                    <FaPhone className="text-green-600 text-2xl" />
-                    <h3 className="text-xl font-bold text-dark-800">
-                      Mobile Money Donations
-                    </h3>
-                  </div>
-                  <ul className="space-y-2 text-dark-700">
-                    <li>
-                      <span className="font-semibold">Receiver Name:</span>{" "}
-                      Nakimera Lilian
-                    </li>
-                    <li>
-                      <span className="font-semibold">MTN/Airtel Number:</span>{" "}
-                      0779150560
-                    </li>
-                    <li className="text-sm text-dark-600">
-                      Send directly via Mobile Money and confirm with our team.
-                    </li>
-                  </ul>
-                  {/* <a
-                    href="tel:*165*1*"
-                    className="mt-4 inline-block bg-green-600 text-white py-3 px-6 rounded-xl font-semibold shadow-md hover:bg-green-700 transition"
-                  >
-                    Or Directly Open Mobile Money (MTN/Airtel)
-                  </a> */}
-                </div>
-              </div>
+          {/* Payment Info */}
+          <motion.div variants={fadeInUp} className="space-y-3 mb-8 text-center">
+            <div className="font-black text-2xl md:text-4xl text-[#2563EB]">
+              FOR ZELLE, VENMO, CASH APP, PAYPAL
             </div>
-          </div>
+            <div className="font-black text-3xl md:text-5xl text-[#2563EB]">
+              📞 +1 508 810 7993
+            </div>
+            <div className="font-bold text-xl md:text-3xl mt-6 text-[#9333EA]">
+              FOR CHECKS: PAYABLE TO
+            </div>
+            <div className="font-bold text-xl md:text-3xl text-[#9333EA]">
+              Hope Christian Foundation
+            </div>
+            <div className="font-bold text-xl md:text-3xl mt-4 text-[#9333EA]">
+              Or call +1 508 810 7993
+            </div>
+          </motion.div>
+
+          {/* Divider Line */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="w-full h-1 bg-[#2563EB] mx-auto mb-8"
+          ></motion.div>
         </div>
-      </div>
 
-      {/* Ways You Can Help */}
-      <div className="py-16 px-4 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
-          Ways You Can Help
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
-            <FaHeart className="text-5xl text-primary-600 mb-6" />
-            <h3 className="text-2xl font-bold mb-4">Make a Donation</h3>
-            <p className="text-gray-600 mb-6">
-              Contribute to our programs and help us reach more children with
-              food, shelter, and education.
-            </p>
-            <a
-              href="tel:*165*1*0779150560#"
-              className="inline-flex items-center text-primary-600 font-semibold hover:text-primary-800"
-            >
-              Donate Now <FaArrowRight className="ml-2" />
-            </a>
+        {/* Bank Transfer Section */}
+        <motion.div
+          variants={fadeInUp}
+          className="bg-[#E6FFF2] rounded-3xl p-8 md:p-12 text-left shadow-2xl"
+        >
+          <h3 className="text-3xl md:text-4xl font-black text-[#15803D] mb-6">
+            Bank Name: TD Bank
+          </h3>
+          <div>
+            <span className="block">Account Name:</span>
+            <span className="text-2xl md:text-3xl font-black">
+              Hope Christian Foundation
+            </span>
           </div>
+        </motion.div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
-            <FaUsers className="text-5xl text-secondary-600 mb-6" />
-            <h3 className="text-2xl font-bold mb-4">Sponsor a Child</h3>
-            <p className="text-gray-600 mb-6">
-              Partner with us to support a child's education, health, and
-              spiritual growth.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center text-secondary-600 font-semibold hover:text-secondary-800"
-            >
-              Learn More <FaArrowRight className="ml-2" />
-            </Link>
+        {/* ✅ Animated "Ways You Can Help" Section */}
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="relative z-10 mt-20 w-full max-w-6xl text-center"
+        >
+          <h2 className="text-3xl font-bold mb-10 text-[#1E293B]">
+            Ways You Can Help
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <FaHeart className="text-[#F97316] text-4xl mb-4 mx-auto" />,
+                title: "Make a Donation",
+                desc: "Contribute to our programs and help us reach more children with food, shelter, and education.",
+                bg: "#FFF4E6",
+                text: "#F97316",
+              },
+              {
+                icon: <FaHandshake className="text-[#3B82F6] text-4xl mb-4 mx-auto" />,
+                title: "Sponsor a Child",
+                desc: "Partner with us to support a child’s education, health, and spiritual growth.",
+                bg: "#E8F1FF",
+                text: "#3B82F6",
+              },
+              {
+                icon: <FaHandshake className="text-[#16A34A] text-4xl mb-4 mx-auto" />,
+                title: "Partner With Us",
+                desc: "Join hands with us as a church, organization, or individual to expand our reach.",
+                bg: "#E6FFF2",
+                text: "#16A34A",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                variants={fadeInUp}
+                whileHover={{ scale: 1.05 }}
+                className="p-8 rounded-2xl shadow-md hover:shadow-xl transition"
+                style={{ backgroundColor: item.bg }}
+              >
+                {item.icon}
+                <h3 className="font-bold text-xl mb-2" style={{ color: item.text }}>
+                  {item.title}
+                </h3>
+                <p className="text-[#1E293B] mb-4">{item.desc}</p>
+                <Link
+                  to="/contact"
+                  className="font-semibold hover:underline"
+                  style={{ color: item.text }}
+                >
+                  Learn More →
+                </Link>
+              </motion.div>
+            ))}
           </div>
+        </motion.section>
 
-          <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
-            <FaHandsHelping className="text-5xl text-green-600 mb-6" />
-            <h3 className="text-2xl font-bold mb-4">Partner With Us</h3>
-            <p className="text-gray-600 mb-6">
-              Join hands with us as a church, organization, or individual to
-              expand our reach.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center text-green-600 font-semibold hover:text-green-800"
-            >
-              Get Involved <FaArrowRight className="ml-2" />
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Impact Areas */}
-      <div className="bg-gray-100 py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+        {/* ✅ Animated "Your Support Makes This Possible" Section */}
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="relative z-10 mt-20 w-full max-w-6xl text-center"
+        >
+          <h2 className="text-3xl font-bold mb-10 text-[#1E293B]">
             Your Support Makes This Possible
           </h2>
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="bg-white p-6 rounded-2xl shadow-lg text-center">
-              <FaGraduationCap className="text-4xl text-primary-600 mb-4 mx-auto" />
-              <h3 className="text-xl font-bold mb-2">Education</h3>
-              <p className="text-gray-600">
-                Providing quality education and school supplies.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl shadow-lg text-center">
-              <FaHome className="text-4xl text-secondary-600 mb-4 mx-auto" />
-              <h3 className="text-xl font-bold mb-2">Shelter</h3>
-              <p className="text-gray-600">
-                Safe housing for vulnerable children and families.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl shadow-lg text-center">
-              <FaGift className="text-4xl text-green-600 mb-4 mx-auto" />
-              <h3 className="text-xl font-bold mb-2">Food Support</h3>
-              <p className="text-gray-600">
-                Nutritious meals for children and families in need.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl shadow-lg text-center">
-              <FaHandsHelping className="text-4xl text-yellow-600 mb-4 mx-auto" />
-              <h3 className="text-xl font-bold mb-2">Community</h3>
-              <p className="text-gray-600">
-                Building strong, supportive, faith-based communities.
-              </p>
-            </div>
+            {[
+              {
+                icon: <FaGraduationCap className="text-[#F97316] text-4xl mb-4 mx-auto" />,
+                title: "Education",
+                desc: "Providing quality education and school supplies.",
+                bg: "#FFF4E6",
+              },
+              {
+                icon: <FaHome className="text-[#3B82F6] text-4xl mb-4 mx-auto" />,
+                title: "Shelter",
+                desc: "Safe housing for vulnerable children and families.",
+                bg: "#E8F1FF",
+              },
+              {
+                icon: <FaGift className="text-[#16A34A] text-4xl mb-4 mx-auto" />,
+                title: "Food Support",
+                desc: "Nutritious meals for children and families in need.",
+                bg: "#E6FFF2",
+              },
+              {
+                icon: <FaHandshake className="text-[#F97316] text-4xl mb-4 mx-auto" />,
+                title: "Community",
+                desc: "Building strong, supportive, faith-based communities.",
+                bg: "#FFF4E6",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                variants={fadeInUp}
+                whileHover={{ scale: 1.05 }}
+                className="p-8 rounded-2xl shadow-md hover:shadow-xl transition"
+                style={{ backgroundColor: item.bg }}
+              >
+                {item.icon}
+                <h3 className="font-bold text-xl mb-2">{item.title}</h3>
+                <p className="text-[#1E293B]">{item.desc}</p>
+              </motion.div>
+            ))}
           </div>
-        </div>
-      </div>
+        </motion.section>
+      </motion.div>
 
-      {/* Call to Action */}
-      <div className="bg-gradient-to-r from-primary-600 to-secondary-600 py-16">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Join Our Mission Today
-          </h2>
-          <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Every donation, prayer, and partnership helps us bring hope to more
-            families in the world. Together, we can transform lives through the
-            love of Christ.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-    href="tel:*165*10#"
-    className="bg-white text-primary-600 py-4 px-8 rounded-2xl text-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-  >
-    Donate Now
-  </a>
-            <a
-              href="/contact"
-              className="bg-transparent text-white py-4 px-8 rounded-2xl text-xl font-semibold hover:bg-white/10 transition-all duration-300 border-2 border-white/30 hover:border-white/60"
-            >
-              Learn More
-            </a>
-          </div>
-        </div>
-      </div>
+      {/* Extra CSS for Floating Animation */}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-15px); }
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
-}
+};
+
+export default Donate;
